@@ -54,7 +54,7 @@ export const ContentTitle = styled.span`
   font-weight: bold;
   margin-bottom: 6px;
   font-size: 22px;
-  color: #4a4a4a;
+  color: crimson;
 `;
 
 export const ContentSubtitle = styled.span`
