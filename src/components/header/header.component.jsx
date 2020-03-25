@@ -22,6 +22,7 @@ const Header = ({ currentUser, hidden }) => (
     <LogoContainer to='/'>
       <Logo className='logo' />
     </LogoContainer>
+    <h1>CRWN Clothing</h1>
     <OptionsContainer>
       <OptionLink to='/shop'>SHOP</OptionLink>
       <OptionLink to='/shop'>CONTACT</OptionLink>
