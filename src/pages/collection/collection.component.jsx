@@ -10,8 +10,10 @@ import {
   CollectionTitle,
   CollectionItemsContainer
 } from './collection.styles';
+import { firestore } from 'firebase';
 
 const CollectionPage = ({ collection }) => {
+
   const { title, items } = collection;
   return (
     <CollectionPageContainer>
