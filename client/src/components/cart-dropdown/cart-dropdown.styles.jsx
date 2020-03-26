@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import CustomButton from '../custom-button/custom-button.component';
+import styled from 'styled-components';
+import CustomButton from '../../../../../crwn-clothing/client/src/components/custom-button/custom-button.component';
 
 export const CartDropdownContainer = styled.div`
   position: absolute;
@@ -16,13 +16,12 @@ export const CartDropdownContainer = styled.div`
 `;
 
 export const CartDropdownButton = styled(CustomButton)`
-    margin-top: auto;
-    `;
+  margin-top: auto;
+`;
 
 export const EmptyMessageContainer = styled.span`
-    font-size: 15px;
-    margin: 15px auto;
-}
+  font-size: 18px;
+  margin: 50px auto;
 `;
 
 export const CartItemsContainer = styled.div`
