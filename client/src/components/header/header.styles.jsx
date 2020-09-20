@@ -1,30 +1,45 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const HeaderContainer = styled.div`
-  height: 70px;
+  height: 75px;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 25px;
+  margin: 10px;
 
   @media screen and (max-width: 800px) {
-    height: 60px;
-    padding: 10px;
-    margin-bottom: 20px;
+    height: 70px;
+    padding: auto;
+    margin-left: 60px;
+    justify-content: space-evenly;
   }
-`;
+`
+
+export const HeaderTitle = styled.h2`
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: auto;
+  margin: auto;
+  color: white;
+  text-shadow: 1px 0px 10px #000;
+  font-weight: bolder;
+  font-size: 18px;
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+`
 
 export const LogoContainer = styled(Link)`
-  height: 100%;
-  width: 70px;
-  padding: 25px;
+  height: 50%;
+  width: 100px;
+  margin: auto;
 
   @media screen and (max-width: 800px) {
-    width: 50px;
-    padding: 0;
+    display: none;
   }
-`;
+`
 
 export const OptionsContainer = styled.div`
   width: 50%;
@@ -36,9 +51,14 @@ export const OptionsContainer = styled.div`
   @media screen and (max-width: 800px) {
     width: 80%;
   }
-`;
+`
 
 export const OptionLink = styled(Link)`
-  padding: 10px 15px;
+  padding: 25px;
+  height: 100%;
+  font-size: 24px;
+  color: white;
+  text-shadow: 1px 0px 10px #000;
+  font-weight: bold;
   cursor: pointer;
-`;
+`

@@ -1,11 +1,15 @@
 body {
   font-family: 'Open Sans Condensed';
   padding: 20px 60px;
+  background: url('https://wallpapercave.com/wp/CcGRIfJ.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 * {

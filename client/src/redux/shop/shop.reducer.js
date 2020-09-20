@@ -25,6 +25,11 @@ const shopReducer = (state = INITIAL_STATE, action) => {
         isFetching: false,
         errorMessage: action.payload
       };
+    case ShopActionTypes.FETCH_CONTACT_INFO_START:
+      return {
+        ...state,
+        isFetching: true
+      }
     default:
       return state;
   }

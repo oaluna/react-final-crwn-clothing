@@ -19,6 +19,11 @@ export const fetchCollectionsFailure = errorMessage => ({
   payload: errorMessage
 });
 
+export const fetchContactInfoStart = contactInfo => ({
+  type: ShopActionTypes.FETCH_CONTACT_INFO_START,
+  payload: contactInfo
+})
+
 export const fetchCollectionsStartAsync = () => {
   return dispatch => {
     const collectionRef = firestore.collection('collections');

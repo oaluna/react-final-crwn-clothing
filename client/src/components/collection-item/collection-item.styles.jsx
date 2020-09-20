@@ -11,11 +11,11 @@ export const CollectionItemContainer = styled.div`
 
   &:hover {
     .image {
-      opacity: 0.8;
+      opacity: 1.0;
     }
 
     button {
-      opacity: 0.85;
+      opacity: 1.0;
       display: flex;
     }
   }
@@ -25,11 +25,11 @@ export const CollectionItemContainer = styled.div`
 
     &:hover {
       .image {
-        opacity: unset;
+        opacity: 1;
       }
 
       button {
-        opacity: unset;
+        opacity: 1;
       }
     }
   }

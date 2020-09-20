@@ -2,11 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import { selectDirectorySections } from '../../../../../lesson-32/client/src/redux/directory/directory.selectors';
+import { selectDirectorySections } from '../../redux/directory/directory.selectors';
 
-import MenuItem from '../../../../../lesson-32/client/src/components/menu-item/menu-item.component';
+import MenuItem from '../menu-item/menu-item.component';
 
 import { DirectoryMenuContainer } from './directory.styles';
+
+
 
 const Directory = ({ sections }) => (
   <DirectoryMenuContainer>
