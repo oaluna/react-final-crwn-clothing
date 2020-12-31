@@ -8,6 +8,7 @@ export const CollectionItemContainer = styled.div`
   height: 350px;
   align-items: center;
   position: relative;
+  color: white;
 
   &:hover {
     .image {
@@ -30,6 +31,7 @@ export const CollectionItemContainer = styled.div`
 
       button {
         opacity: 1;
+        color: goldenrod;
       }
     }
   }

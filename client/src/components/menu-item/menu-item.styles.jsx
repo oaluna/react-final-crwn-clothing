@@ -76,9 +76,13 @@ export const ContentContainer = styled.div`
   align-items: center;
   justify-content: center;
   border: 1px solid black;
-  background: linear-gradient(45deg, #03ffdb 0%, #d1f 100%);
+  background: black;
   opacity: 0.7;
   position: absolute;
+  &:hover {
+    background: goldenrod;
+
+  }
 
   @media screen and (max-width: 800px) {
     opacity: 1;
@@ -91,6 +95,9 @@ export const ContentTitle = styled.span`
   text-shadow: 1px 0px 10px #000;
   font-size: 22px;
   color: white;
+  &:hover {
+    color: black;
+  }
 `
 
 export const ContentSubtitle = styled.span`
@@ -98,4 +105,7 @@ export const ContentSubtitle = styled.span`
   text-shadow: 1px 0px 10px #000;
   font-size: 16px;
   color: white;
+  &:hover {
+    color: black;
+  }
 `

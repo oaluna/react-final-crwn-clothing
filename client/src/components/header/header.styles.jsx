@@ -24,8 +24,11 @@ export const HeaderTitle = styled.h2`
   margin: auto;
   color: white;
   text-shadow: 1px 0px 10px #000;
-  font-weight: bolder;
+  font-weight: 600;
   font-size: 18px;
+  &:hover {
+    color: goldenrod;
+  }
   @media screen and (max-width: 800px) {
     display: none;
   }
@@ -47,6 +50,9 @@ export const OptionsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  &:hover {
+    color: goldenrod;
+  }
 
   @media screen and (max-width: 800px) {
     width: 80%;
@@ -61,4 +67,7 @@ export const OptionLink = styled(Link)`
   text-shadow: 1px 0px 10px #000;
   font-weight: bold;
   cursor: pointer;
+  &:hover {
+    color: goldenrod;
+  }
 `
