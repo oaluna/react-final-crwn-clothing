@@ -7,6 +7,7 @@ import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component
 import { selectCartHidden } from '../../redux/cart/cart.selectors'
 import { selectCurrentUser } from '../../redux/user/user.selectors'
 import { signOutStart } from '../../redux/user/user.actions'
+import Logo from "../../assets/crown.svg";
 
 import {
   HeaderContainer,
@@ -16,19 +17,19 @@ import {
   OptionLink
 } from './header.styles'
 
-import { ReactComponent as Logo } from "../../assets/crown.svg";
-
 const Header = ({ currentUser, hidden, signOutStart }) => (
   <HeaderContainer>
- <LogoContainer>
- <OptionLink to='/'>
-   <Logo className='logo' />
-   </OptionLink>
- </LogoContainer>
     <HeaderTitle>
-    <h1>LUNA'S WEB SOLUTIONS (E-COMMERCE DEMO)</h1>
+ <OptionLink to='/'>
+
+        <LogoContainer>
+          <img src={Logo} className="logo" alt="glowing-flowers" />
+   </LogoContainer>
+
+   </OptionLink>
     </HeaderTitle>
-    
+
+
     <OptionsContainer>
       <OptionLink to='/shop'>SHOP</OptionLink>
       <OptionLink to='/contact'>CONTACT</OptionLink>

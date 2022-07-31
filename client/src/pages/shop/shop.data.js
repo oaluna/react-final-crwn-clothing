@@ -1,249 +1,185 @@
 const SHOP_DATA = [
   {
     id: 1,
-    title: 'Hats',
-    routeName: 'hats',
+    title: 'All Occasions',
+    route: 'shop/all-occasions',
     items: [
       {
-        id: 1,
-        name: 'Brown Brim',
-        imageUrl: 'https://i.ibb.co/ZYW3VTp/brown-brim.png',
-        price: 25
+        id: 100,
+        name: 'Orchid Garden',
+        imageUrl:
+          'https://res.cloudinary.com/dgdnpkfun/image/upload/v1656003850/arrangements/phaelenopsis-orchid-garden_seodpx.png',
+        description:
+          'A perfect bouquet to give to anybody to express your love, care, congratulations, anniversary, birthday, thank you, miss you, get well etc.',
+        fullDescription:
+          'A perfect bouquet to give to anybody to express your love, care, congratulations, anniversary, birthday, thank you, miss you, get well etc. The bouquet made as one side view and a bit in long stems they are mixed spring flowers variety of mum, ]chrysanthemums, rose, lisianthus, tulips, spray rose and some greenish with a variety of foliages to make it so elegant in your hand or when it’s placed in the glass water vase (included) on table as a home decor.',
+        dimensions: 'W-6”, D-4”, H-13”',
+        pricingText: '$49.50',
       },
       {
-        id: 2,
-        name: 'Blue Beanie',
-        imageUrl: 'https://i.ibb.co/ypkgK0X/blue-beanie.png',
-        price: 18
+        id: 101,
+        name: 'Neon Light City',
+        imageUrl:
+          'https://res.cloudinary.com/dgdnpkfun/image/upload/v1656003850/arrangements/neon-light-city-design_jgzsyq.png',
+        description:
+          'Mixed spring flowers and use mostly bright and happy colors that give a young look, energetic and casual.',
+        fullDescription:
+          'The arrangement I make specially for graduation, bridesmaids or birthday girls, the compact size and the round shape makes this bouquet so adorable. This bouquet also can be placed in the vase after the event is done and turn into a home decor or even centerpiece. Mixed spring flowers and use mostly bright and happy colors that give a young look, energetic and casual.',
+        dimensions: 'W-5”, D-4”, H-10”',
+        pricingText: '$41.50',
       },
-      {
-        id: 3,
-        name: 'Brown Cowboy',
-        imageUrl: 'https://i.ibb.co/QdJwgmp/brown-cowboy.png',
-        price: 35
-      },
-      {
-        id: 4,
-        name: 'Grey Brim',
-        imageUrl: 'https://i.ibb.co/RjBLWxB/grey-brim.png',
-        price: 25
-      },
-      {
-        id: 5,
-        name: 'Green Beanie',
-        imageUrl: 'https://i.ibb.co/YTjW3vF/green-beanie.png',
-        price: 18
-      },
-      {
-        id: 6,
-        name: 'Palm Tree Cap',
-        imageUrl: 'https://i.ibb.co/rKBDvJX/palm-tree-cap.png',
-        price: 14
-      },
-      {
-        id: 7,
-        name: 'Red Beanie',
-        imageUrl: 'https://i.ibb.co/bLB646Z/red-beanie.png',
-        price: 18
-      },
-      {
-        id: 8,
-        name: 'Wolf Cap',
-        imageUrl: 'https://i.ibb.co/1f2nWMM/wolf-cap.png',
-        price: 14
-      },
-      {
-        id: 9,
-        name: 'Blue Snapback',
-        imageUrl: 'https://i.ibb.co/X2VJP2W/blue-snapback.png',
-        price: 16
-      }
-    ]
+    ],
   },
+
   {
     id: 2,
-    title: 'Sneakers',
-    routeName: 'sneakers',
+    title: 'bridal',
+    route: 'shop/bridal',
     items: [
       {
-        id: 10,
-        name: 'Adidas NMD',
-        imageUrl: 'https://i.ibb.co/0s3pdnc/adidas-nmd.png',
-        price: 220
+        id: 102,
+        name: 'Metropolitan',
+        imageUrl:
+          'https://res.cloudinary.com/dgdnpkfun/image/upload/v1656003850/arrangements/metropolitan-design_fashox.png',
+        description: 'A perfect bouquet to gift for any occasion.',
+        fullDescription:
+          'A perfect bouquet to gift for any occasion. The bouquet made as one side view and a bit in long stems they are mixed spring flowers variety of mum, chrysanthemums, roses, lisianthus, tulips, spray roses and some greenish with a variety of foliages to make it so elegant in your hand or when it’s placed in a ceramic water vase (included) on table as a home decor. ',
+        dimensions: '',
+        pricingText: '$57.50',
       },
-      {
-        id: 11,
-        name: 'Adidas Yeezy',
-        imageUrl: 'https://i.ibb.co/dJbG1cT/yeezy.png',
-        price: 280
-      },
-      {
-        id: 12,
-        name: 'Black Converse',
-        imageUrl: 'https://i.ibb.co/bPmVXyP/black-converse.png',
-        price: 110
-      },
-      {
-        id: 13,
-        name: 'Nike White AirForce',
-        imageUrl: 'https://i.ibb.co/1RcFPk0/white-nike-high-tops.png',
-        price: 160
-      },
-      {
-        id: 14,
-        name: 'Nike Red High Tops',
-        imageUrl: 'https://i.ibb.co/QcvzydB/nikes-red.png',
-        price: 160
-      },
-      {
-        id: 15,
-        name: 'Nike Brown High Tops',
-        imageUrl: 'https://i.ibb.co/fMTV342/nike-brown.png',
-        price: 160
-      },
-      {
-        id: 16,
-        name: 'Air Jordan Limited',
-        imageUrl: 'https://i.ibb.co/w4k6Ws9/nike-funky.png',
-        price: 190
-      },
-      {
-        id: 17,
-        name: 'Timberlands',
-        imageUrl: 'https://i.ibb.co/Mhh6wBg/timberlands.png',
-        price: 200
-      }
-    ]
+    ],
   },
+
   {
     id: 3,
-    title: 'Jackets',
-    routeName: 'jackets',
+    title: 'Holidays',
+    route: 'shop/holidays',
     items: [
       {
-        id: 18,
-        name: 'Black Jean Shearling',
-        imageUrl: 'https://i.ibb.co/XzcwL5s/black-shearling.png',
-        price: 125
+        id: 103,
+        name: 'Chic Centerpiece',
+        imageUrl:
+          'https://res.cloudinary.com/dgdnpkfun/image/upload/v1656003850/arrangements/cosmoplolitan-design-alt_pmwds2.png',
+        description:
+          'Mixed spring flowers and use mostly bright and happy colors.',
+        fullDescription:
+          'For graduations, bridesmaids or birthday girls. Called chic for its petite shape. This bouquet also can be placed in the vase after the event  is done and turn into a home decor or even as a centerpiece. Mixed spring flowers and use mostly bright and happy colors. So comfortable to hold in your hand, modern and classy.',
+        dimensions: '',
+        pricingText: '$41.50',
       },
       {
-        id: 19,
-        name: 'Blue Jean Jacket',
-        imageUrl: 'https://i.ibb.co/mJS6vz0/blue-jean-jacket.png',
-        price: 90
+        id: 104,
+        name: "City's Tulips",
+        imageUrl:
+          'https://res.cloudinary.com/dgdnpkfun/image/upload/v1656003850/arrangements/citys-tulips-design_nqwe7c.png',
+        description:
+          'A gorgeous tulip bouquet with chrysanthemum and a variety of mums and foliages.',
+        fullDescription:
+          'A gorgeous tulip bouquet with chrysanthemum and a variety of mums and foliages. Accesorized with curly willows to make this bouquet stunning. Available in one or two colors of your choice and in bunches of 18, 24 or 36 tulips.',
+        dimensions: 'varies',
+        pricingText: '$59 for 18 tulips, $69 for 24 tulips, $89 for 36 tulips',
       },
-      {
-        id: 20,
-        name: 'Grey Jean Jacket',
-        imageUrl: 'https://i.ibb.co/N71k1ML/grey-jean-jacket.png',
-        price: 90
-      },
-      {
-        id: 21,
-        name: 'Brown Shearling',
-        imageUrl: 'https://i.ibb.co/s96FpdP/brown-shearling.png',
-        price: 165
-      },
-      {
-        id: 22,
-        name: 'Tan Trench',
-        imageUrl: 'https://i.ibb.co/M6hHc3F/brown-trench.png',
-        price: 185
-      }
-    ]
+    ],
   },
+
   {
     id: 4,
-    title: 'Womens',
-    routeName: 'womens',
+    title: 'Well Wishes',
+    route: 'shop/well-wishes',
     items: [
       {
-        id: 23,
-        name: 'Blue Tanktop',
-        imageUrl: 'https://i.ibb.co/7CQVJNm/blue-tank.png',
-        price: 25
+        id: 105,
+        name: 'Asymmetric Centerpiece',
+        imageUrl:
+          'https://res.cloudinary.com/dgdnpkfun/image/upload/v1656003846/arrangements/asymmetric-centerpiece-design_anphoq.png',
+        description:
+          'Its unusual, mystifying shape give an elegant look to your dining table.',
+        fullDescription:
+          'The dramatic curve of this asymmetrical arrangement makes for an excellent centerpiece. Its unusual, mystifying shape give an elegant look to your dining table. Predominantly made of roses, along with carnations, hypericum, delphinium, eucalyptus, evangarium, curly willows and foliage.',
+        dimensions: '',
+        pricingText: '$59.00',
       },
       {
-        id: 24,
-        name: 'Floral Blouse',
-        imageUrl: 'https://i.ibb.co/4W2DGKm/floral-blouse.png',
-        price: 20
+        id: 106,
+        name: "City's Rose",
+        imageUrl:
+          'https://res.cloudinary.com/dgdnpkfun/image/upload/v1656003848/arrangements/citys-rose-design_dqwdgr.png',
+        description:
+          'Available in one or two colors and in bunches of 18, 24, or 36 roses.',
+        fullDescription:
+          'A gorgeous roses  bouquet with huckleberry, alstroemeria and foliage accessories with curly willows to make this roses arrangement stunning. Available in one or two colors and in bunches of 18, 24, or 36 roses.',
+        dimensions: 'varies',
+        pricingText: '$10 for 18roses, $145 for 24 roses, $25 for 36 roses',
       },
-      {
-        id: 25,
-        name: 'Floral Dress',
-        imageUrl: 'https://i.ibb.co/KV18Ysr/floral-skirt.png',
-        price: 80
-      },
-      {
-        id: 26,
-        name: 'Red Dots Dress',
-        imageUrl: 'https://i.ibb.co/N3BN1bh/red-polka-dot-dress.png',
-        price: 80
-      },
-      {
-        id: 27,
-        name: 'Striped Sweater',
-        imageUrl: 'https://i.ibb.co/KmSkMbH/striped-sweater.png',
-        price: 45
-      },
-      {
-        id: 28,
-        name: 'Yellow Track Suit',
-        imageUrl: 'https://i.ibb.co/v1cvwNf/yellow-track-suit.png',
-        price: 135
-      },
-      {
-        id: 29,
-        name: 'White Blouse',
-        imageUrl: 'https://i.ibb.co/qBcrsJg/white-vest.png',
-        price: 20
-      }
-    ]
+    ],
   },
   {
     id: 5,
-    title: 'Mens',
-    routeName: 'mens',
+    title: 'deals',
+    route: 'shop/deals',
     items: [
       {
-        id: 30,
-        name: 'Camo Down Vest',
-        imageUrl: 'https://i.ibb.co/xJS0T3Y/camo-vest.png',
-        price: 325
+        id: 107,
+        name: "Father's Day Special",
+        imageUrl:
+          'https://res.cloudinary.com/dgdnpkfun/image/upload/v1656003850/arrangements/masculine-fathers-day_gnl5x6.png',
+        description:
+          'Product description not yet available. Please check back later.',
+        fullDescription:
+          'Product description not yet available. Please check back later.',
+        dimensions: '',
+        pricingText: '',
       },
       {
-        id: 31,
-        name: 'Floral T-shirt',
-        imageUrl: 'https://i.ibb.co/qMQ75QZ/floral-shirt.png',
-        price: 20
+        id: 108,
+        name: 'Contemporary',
+        imageUrl:
+          'https://res.cloudinary.com/dgdnpkfun/image/upload/v1656003848/arrangements/contemporary-design_alhn5k.png',
+        description:
+          'Product description not yet available. Please check back later.',
+        fullDescription:
+          'A contemporary, minimalist  with an avant-garde style will give a modern look to your events or your home. The arrangement uses a minimal number of focal flowers and curvy branches to create a simple, clean  and beautiful line arrangement. It’s a designer choice to pick. Your info of what this arrangement is going to be used will help the designer to create a perfect fit material.',
+        dimensions: '',
+        pricingText: '$69.00',
       },
       {
-        id: 32,
-        name: 'Black & White Longsleeve',
-        imageUrl: 'https://i.ibb.co/55z32tw/long-sleeve.png',
-        price: 25
+        id: 109,
+        name: "City's Wedding",
+        imageUrl:
+          'https://res.cloudinary.com/dgdnpkfun/image/upload/v1656003848/arrangements/city-wedding-combo_vjvb6d.png',
+        description:
+          'Product description not yet available. Please check back later.',
+        fullDescription:
+          'Product description not yet available. Please check back later.',
+        dimensions: '',
+        pricingText: '',
       },
       {
-        id: 33,
-        name: 'Pink T-shirt',
-        imageUrl: 'https://i.ibb.co/RvwnBL8/pink-shirt.png',
-        price: 25
+        id: 110,
+        name: "City's Mini Succulent Garden",
+        imageUrl:
+          'https://res.cloudinary.com/dgdnpkfun/image/upload/v1656003847/arrangements/city-mini-succulent-garden_mc71oh.png',
+        description:
+          'Product description not yet available. Please check back later.',
+        fullDescription:
+          'A variety of succulents were planted in a low pan ceramic vase design and arranged like the back garden. This popular gift perfect to bring on the house warming party, birthday, congratulations or to thank you.',
+        dimensions: '',
+        pricingText: '$35.00',
       },
       {
-        id: 34,
-        name: 'Jean Long Sleeve',
-        imageUrl: 'https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png',
-        price: 40
+        id: 111,
+        name: "City's Combo - 2 In 1",
+        imageUrl:
+          'https://res.cloudinary.com/dgdnpkfun/image/upload/v1656003846/arrangements/city-combo-two-in-one_q0sk7l.png',
+        description:
+          'Product description not yet available. Please check back later.',
+        fullDescription:
+          'A combo of choices  of  two different designs in vertical, asymmetrical or centerpiece as you need.',
+        dimensions: '',
+        pricingText: '',
       },
-      {
-        id: 35,
-        name: 'Burgundy T-shirt',
-        imageUrl: 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png',
-        price: 25
-      }
-    ]
-  }
+    ],
+  },
 ];
 
-export default SHOP_DATA; 
+export default SHOP_DATA;

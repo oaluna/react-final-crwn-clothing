@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import { ReactComponent as ShoppingIconSVG } from '../../assets/shopping-bag.svg';
 
 export const CartContainer = styled.div`
-  width: 45px;
-  height: 45px;
+  width: 48px;
+  height: 48px;
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-end;
   cursor: pointer;
 `;
 
@@ -16,6 +16,7 @@ export const ShoppingIcon = styled(ShoppingIconSVG)`
   width: 24px;
   height: 24px;
   background: none;
+  align-items: center;
 `;
 
 export const ItemCountContainer = styled.span`
