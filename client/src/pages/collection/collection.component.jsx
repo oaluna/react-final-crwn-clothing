@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
+import { Route } from 'react-router-dom';
 import CollectionItem from '../../components/collection-item/collection-item.component';
 
 import { selectCollection } from '../../redux/shop/shop.selectors';
@@ -21,6 +21,8 @@ const CollectionPage = ({ collection }) => {
           <CollectionItem key={item.id} item={item} />
         ))}
       </CollectionItemsContainer>
+       <Route
+          path={`${match.path}/:collectionId/:${items.item.id}`} component={ItemPage} />
     </CollectionPageContainer>
   );
 };

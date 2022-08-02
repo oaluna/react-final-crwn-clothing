@@ -39,6 +39,7 @@ const App = ({ checkUserSession, currentUser }) => {
             }
           />
         </Switch>
+        <footer style={{textAlign:'center', margin: "3em auto 0 auto", padding: 0}}>&copy; 2022 by <a href="https://oscarluna.dev">Oscar Armando Luna</a></footer>
       </div>
     );
   }

@@ -1,14 +1,15 @@
 body {
   font-family: 'Raleway', sans-serif;
-  padding: 20px 60px;
+  padding: 20px 0px;
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 * {
   box-sizing: border-box;
-  color: white;
+  color: black;
 }

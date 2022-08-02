@@ -1,10 +1,12 @@
 import React from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios';
+import ICON from '../../assets/ICON.png'
 
-const StripeCheckoutButton = ({ price }) => {
-  const priceForStripe = price * 100;
-  const publishableKey = 'pk_test_b7a3hFL5nC3qlBCZ6bQACpez00gyMMP52H';
+const StripeCheckoutButton = ({ pricingText }) => {
+  const priceForStripe = pricingText * 100;
+  const publishableKey =
+    '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';
 
   const onToken = token => {
     axios({
@@ -29,11 +31,11 @@ const StripeCheckoutButton = ({ price }) => {
   return (
     <StripeCheckout
       label='Pay Now'
-      name='CRWN Clothing Ltd.'
+      name='Glowing Flowers | Plants & Gifts'
       billingAddress
       shippingAddress
-      image='https://svgshare.com/i/CUz.svg'
-      description={`Your total is $${price}`}
+      image={ICON}
+      description={console.log(priceForStripe)}
       amount={priceForStripe}
       panelLabel='Pay Now'
       token={onToken}

@@ -2,10 +2,12 @@ import styled, { keyframes } from 'styled-components';
 
 export const StyledHero = styled.div`
   top: 0;
+  left: 0;
   margin-bottom: 3vh;
   height: 75vh;
   width: 100vw;
   overflow: hidden;
+  font-family: 'Yellowtail', cursive;
 `;
 
 const FadeInAnimation = keyframes`
@@ -47,6 +49,7 @@ export const HeroText = styled.h1`
   font-weight: 500;
   color: white;
   z-index: 21;
+  margin-bottom: 25px;
   @media (min-width: 300px) {
     position: absolute;
     font-size: 50px;

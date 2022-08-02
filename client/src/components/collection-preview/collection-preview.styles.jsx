@@ -3,10 +3,12 @@ import styled from 'styled-components';
 export const CollectionPreviewContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
+padding: 14px;
+
   &:hover {
     cursor: pointer;
     & .background-image {
+      overflow: visible;
       transform: scale(1.1);
       transition: transform 2.2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     }
@@ -46,21 +48,28 @@ export const CollectionPreviewContainer = styled.div`
 `;
 
 export const TitleContainer = styled.h1`
-  font-size: 28px;
-  font-weight: 600;
+  width: 100vw;
+  font-size: 36px;
+  font-weight: 100;
   margin-bottom: 25px;
+  margin-left: 60px;
+  padding: 5px 5em;
   cursor: pointer;
-  color: white;
+  font-family: 'Yellowtail', cursive;
 
+  background: linear-gradient(245deg, #763259 0%, #886e6b 84%);
+  color: white;
   &:hover {
-    color: goldenrod;
+    color: pink;
   }
 `;
 
 export const PreviewContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-
+  max-width: 80vw;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 15px 15px;
+  margin: 5px auto;
 
   @media screen and (max-width: 800px) {
     display: grid;

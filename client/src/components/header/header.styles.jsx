@@ -24,21 +24,20 @@ export const HeaderTitle = styled.h2`
 
   width: 100%;
 
-  color: white;
   text-shadow: 1px 0px 10px #000;
   font-weight: 600;
   font-size: 18px;
   padding: 0 auto;
   margin: 0 auto;
   &:hover {
-    color: goldenrod;
+    color: crimson;
   }
   @media screen and (max-width: 800px) {
     display: none;
   }
 `;
 
-export const LogoContainer = styled(Link)`
+export const LogoContainer = styled.span`
 
 padding: auto;
 & img {
