@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import {
   clearItemFromCart,
   addItem,
-  removeItem
+  removeItem,
 } from '../../redux/cart/cart.actions';
 
 import {
@@ -12,7 +12,7 @@ import {
   ImageContainer,
   TextContainer,
   QuantityContainer,
-  RemoveButtonContainer
+  RemoveButtonContainer,
 } from './checkout-item.styles';
 
 const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
@@ -20,7 +20,7 @@ const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
   return (
     <CheckoutItemContainer>
       <ImageContainer>
-        <img src={imageUrl} alt='item' />
+        <img src={imageUrl} alt="item" />
       </ImageContainer>
       <TextContainer>{name}</TextContainer>
       <QuantityContainer>
@@ -28,21 +28,22 @@ const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
         <span>{quantity}</span>
         <div onClick={() => addItem(cartItem)}>&#10095;</div>
       </QuantityContainer>
-      <TextContainer>${pricingText}</TextContainer>
-      <RemoveButtonContainer onClick={() => clearItem(cartItem)}>
+      <TextContainer>
+        x<span style={{ marginRight: '15%' }} /> ${pricingText}
+        <span style={{ marginRight: '15%' }} />
+      </TextContainer>
+      <RemoveButtonContainer className="remove" onClick={() => clearItem(cartItem)}>
         &#10005;
       </RemoveButtonContainer>
+<label htmlFor="remove" className="removeLabel">Click to Remove</label>
     </CheckoutItemContainer>
   );
 };
 
-const mapDispatchToProps = dispatch => ({
-  clearItem: item => dispatch(clearItemFromCart(item)),
-  addItem: item => dispatch(addItem(item)),
-  removeItem: item => dispatch(removeItem(item))
+const mapDispatchToProps = (dispatch) => ({
+  clearItem: (item) => dispatch(clearItemFromCart(item)),
+  addItem: (item) => dispatch(addItem(item)),
+  removeItem: (item) => dispatch(removeItem(item)),
 });
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(CheckoutItem);
+export default connect(null, mapDispatchToProps)(CheckoutItem);

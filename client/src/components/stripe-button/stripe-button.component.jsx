@@ -37,7 +37,7 @@ const StripeCheckoutButton = ({ pricingText }) => {
       image={ICON}
       description={console.log(priceForStripe)}
       amount={priceForStripe}
-      panelLabel='Pay Now'
+      panelLabel="Pay Now"
       token={onToken}
       stripeKey={publishableKey}
     />

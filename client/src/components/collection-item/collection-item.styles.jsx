@@ -10,24 +10,48 @@ export const CollectionItemContainer = styled.div`
   position: relative;
   color: black;
   box-shadow: 0px 1.5px 4px rgba(0, 0, 0, 0.3);
-  margin: 15px 25px;
+  margin: 15px;
   padding: 15px;
   cursor: pointer;
   font-size: 24px;
   overflow: visible;
-
+.CollectionFooter {
+   opacity: 0;
+   height:125px;
+   padding-top:15px;
+}
   &:hover {
+    box-shadow: 0px 1.5px 8px rgba(0, 0, 0, 0.45);
     .image {
       opacity: 1;
       transform: scale(1.5);
       transition: 0.2s ease-in;
-
+      position: relative;
       z-index: 2;
+      margin-bottom: 5em;
     }
 
     button {
       opacity: 1;
       display: flex;
+    }
+    .CollectionFooter {
+
+
+
+        opacity: 1;
+
+        transition: 0.3s ease-in;
+        background: white;
+
+        z-index: 200;
+        margin-top: 5em;
+        border: 1px solid black;
+      }
+      @media (max-width: 768px) {
+        overflow-y: scroll;
+        height: 50px;
+      }
     }
   }
 
@@ -75,29 +99,26 @@ export const CollectionFooterContainer = styled.div`
   width: 100%;
   height: 50%;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
   position: absolute;
-  margin:5px 0;
+  margin: 5px 0 0 0;
   bottom: 0;
 `;
 
 export const NameContainer = styled.span`
-  margin: 14px;
-  width:100%;
+  width: 100%;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.5px;
-  text-align:left;
+  padding: 13px 13px 0 auto;
+  text-align: left;
 `;
 
 export const PriceContainer = styled.span`
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content:space-between;
-  position: relative;
-
+  font-size: 20px;
   text-align: right;
   float: right;
   font-weight: 700;
@@ -106,16 +127,13 @@ export const PriceContainer = styled.span`
 
 export const DescriptionContainer = styled.span`
   max-width: 100%;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 500;
   line-height: 1.5;
-  margin: 60% 15px 15px 15px;
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  text-align:left;
-  padding: 15px 0px;
-  @media (max-width: 768px) {
-    overflow-y: scroll;
-    height: 50px;
-  }
+  position: absolute;
+  bottom: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 15px;
 `;

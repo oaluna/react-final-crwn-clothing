@@ -11,6 +11,7 @@ padding: 14px;
       overflow: visible;
       transform: scale(1.1);
       transition: transform 2.2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      left: 5em;
     }
     & .content {
       transition: transform 2.2s;
@@ -57,8 +58,12 @@ export const TitleContainer = styled.h1`
   cursor: pointer;
   font-family: 'Yellowtail', cursive;
 
-  background: linear-gradient(245deg, #763259 0%, #886e6b 84%);
-  color: white;
+  background: linear-gradient(
+    245deg,
+    rgba(118, 50, 89, 1) 5%,
+    rgba(136, 110, 107, 0) 95%
+  );
+  color: rgba(118,50,89,1);
   &:hover {
     color: pink;
   }
@@ -67,7 +72,7 @@ export const TitleContainer = styled.h1`
 export const PreviewContainer = styled.div`
   max-width: 80vw;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
   grid-gap: 15px 15px;
   margin: 5px auto;
 

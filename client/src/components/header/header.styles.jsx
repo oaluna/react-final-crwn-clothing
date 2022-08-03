@@ -41,7 +41,7 @@ export const LogoContainer = styled.span`
 
 padding: auto;
 & img {
-    margin: 0 0 0 5em;
+    margin: 0 0 0 15em;
     height: auto;
     max-width: 300px;
     display: flex;

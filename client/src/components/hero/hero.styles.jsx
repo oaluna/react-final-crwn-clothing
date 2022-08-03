@@ -50,16 +50,16 @@ export const HeroText = styled.h1`
   color: white;
   z-index: 21;
   margin-bottom: 25px;
+  font-size: 72px;
   @media (min-width: 300px) {
     position: absolute;
-    font-size: 50px;
-    margin: auto;
+    font-size: 42px;
+    margin: 15vh auto;
   }
   @media (min-width: 768px) {
-    font-size: 72px;
     width: 40%;
     margin: 45vh 15vw;
-
+    font-size: 56px;
     text-shadow: 0px 1.5px 2px rgba(0, 0, 0, 0.65);
 
     opacity: 1;

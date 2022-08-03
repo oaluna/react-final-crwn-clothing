@@ -8,6 +8,14 @@ export const CheckoutItemContainer = styled.div`
   padding: 15px 0;
   font-size: 20px;
   align-items: center;
+  & .removeLabel {
+    opacity: 0;
+    & :hover {
+      color: crimson;
+      font-size: 8px;
+      opacity: 1;
+    }
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -37,6 +45,10 @@ export const QuantityContainer = styled(TextContainer)`
 `;
 
 export const RemoveButtonContainer = styled.div`
-  padding-left: 12px;
+  padding: 0 4px;
   cursor: pointer;
+  color: white;
+  background: crimson;
+  border-radius: 50%;
+  font-size: 12px;
 `;
