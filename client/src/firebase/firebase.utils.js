@@ -3,14 +3,14 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBlBpPPDValMp7x1Cy_QkA4tgExDKGmG2s",
-  authDomain: "crwn-db-f011f.firebaseapp.com",
-  databaseURL: "https://crwn-db-f011f.firebaseio.com",
-  projectId: "crwn-db-f011f",
-  storageBucket: "crwn-db-f011f.appspot.com",
-  messagingSenderId: "112375008249",
-  appId: "1:112375008249:web:544dfb34eb763b71638b28",
-  measurementId: "G-8PD92QD4P6"
+  apiKey: 'AIzaSyA9azSseaNwwRK7sHbPg4VmSkkOv-ihzpE',
+  authDomain: 'glowing-flower.firebaseapp.com',
+  databaseURL: 'https://glowing-flower-default-rtdb.firebaseio.com',
+  projectId: 'glowing-flower',
+  storageBucket: 'glowing-flower.appspot.com',
+  messagingSenderId: '912214442669',
+  appId: '1:912214442669:web:8670e14e63373f2dafbc24',
+  measurementId: 'G-FP4QV6GRHK',
 };
 
 firebase.initializeApp(firebaseConfig);
@@ -30,7 +30,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
         displayName,
         email,
         createdAt,
-        ...additionalData
+        ...additionalData,
       });
     } catch (error) {
       console.log('error creating user', error.message);
@@ -47,7 +47,7 @@ export const addCollectionAndDocuments = async (
   const collectionRef = firestore.collection(collectionKey);
 
   const batch = firestore.batch();
-  objectsToAdd.forEach(obj => {
+  objectsToAdd.forEach((obj) => {
     const newDocRef = collectionRef.doc();
     batch.set(newDocRef, obj);
   });
@@ -55,15 +55,15 @@ export const addCollectionAndDocuments = async (
   return await batch.commit();
 };
 
-export const convertCollectionsSnapshotToMap = collections => {
-  const transformedCollection = collections.docs.map(doc => {
+export const convertCollectionsSnapshotToMap = (collections) => {
+  const transformedCollection = collections.docs.map((doc) => {
     const { title, items } = doc.data();
 
     return {
-      routeName: encodeURI(title.toLowerCase()),
+      route: encodeURI(title.toLowerCase()),
       id: doc.id,
       title,
-      items
+      items,
     };
   });
 
@@ -75,7 +75,7 @@ export const convertCollectionsSnapshotToMap = collections => {
 
 export const getCurrentUser = () => {
   return new Promise((resolve, reject) => {
-    const unsubscribe = auth.onAuthStateChanged(userAuth => {
+    const unsubscribe = auth.onAuthStateChanged((userAuth) => {
       unsubscribe();
       resolve(userAuth);
     }, reject);

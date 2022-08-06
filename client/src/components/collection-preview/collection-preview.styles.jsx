@@ -26,7 +26,9 @@ padding: 14px;
   }
 
   @media screen and (max-width: 800px) {
+
     align-items: center;
+
     &:hover {
     cursor: pointer;
     & .background-image {
@@ -57,15 +59,24 @@ export const TitleContainer = styled.h1`
   padding: 5px 5em;
   cursor: pointer;
   font-family: 'Yellowtail', cursive;
-
+height: 2px;
   background: linear-gradient(
     245deg,
     rgba(118, 50, 89, 1) 5%,
     rgba(136, 110, 107, 0) 95%
   );
-  color: rgba(118,50,89,1);
+  display:flex;
+  flex-direction: row;align-items: flex-end;
+color: black;
   &:hover {
-    color: pink;
+      color:  rgba(136, 110, 107, 1);
+  }
+  @media (max-width: 800px) {
+    flex-direction:column;
+    align-items:flex-start;
+    margin: 3em;
+    justify-content: flex-start;
+    padding: 0 3em;
   }
 `;
 

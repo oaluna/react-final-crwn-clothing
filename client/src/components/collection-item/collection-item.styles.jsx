@@ -42,21 +42,18 @@ export const CollectionItemContainer = styled.div`
         opacity: 1;
 
         transition: 0.3s ease-in;
-        background: white;
-
+        background: linear-gradient(235deg, rgba(255,255,255,0.11) 0%, rgba(255,255,255,0.06) 84%);
+        backdrop-filter: blur(22px);
         z-index: 200;
         margin-top: 5em;
-        border: 1px solid black;
+        border: 1px solid rgba(0,0,0,0.2);
       }
-      @media (max-width: 768px) {
-        overflow-y: scroll;
-        height: 50px;
-      }
+
     }
   }
 
   @media screen and (max-width: 800px) {
-    width: 40vw;
+    width: 100%;
 
     &:hover {
       .image {
@@ -76,7 +73,13 @@ export const AddButton = styled(CustomButton)`
   opacity: 0.7;
   position: absolute;
   top: 100%;
-
+  color: white;
+  border: none;
+  background: linear-gradient(
+    245deg,
+    rgba(118, 50, 89, 1) 0%,
+    rgba(136, 110, 107, 1) 85%
+  );
   @media screen and (max-width: 800px) {
     display: block;
     opacity: 0.9;
@@ -99,9 +102,8 @@ export const CollectionFooterContainer = styled.div`
   width: 100%;
   height: 50%;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
   text-align: left;
   position: absolute;
   margin: 5px 0 0 0;
@@ -110,10 +112,10 @@ export const CollectionFooterContainer = styled.div`
 
 export const NameContainer = styled.span`
   width: 100%;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.5px;
-  padding: 13px 13px 0 auto;
+  padding: 5px;
   text-align: left;
 `;
 
@@ -126,14 +128,14 @@ export const PriceContainer = styled.span`
 `;
 
 export const DescriptionContainer = styled.span`
-  max-width: 100%;
+  width: 100%;
   font-size: 14px;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.3;
   position: absolute;
-  bottom: 0;
+  color: black;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  padding: 15px;
+  padding: 5px;
 `;

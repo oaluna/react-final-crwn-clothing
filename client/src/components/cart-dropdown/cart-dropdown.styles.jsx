@@ -7,12 +7,15 @@ export const CartDropdownContainer = styled.div`
   height: 540px;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  border: 1px solid black;
   background-color: white;
+
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   top: 90px;
   right: 40px;
   z-index: 5;
+  color: white;
+  box-shadow: 0px 1.5px 5px rgba(0,0,0,0.3)
 `;
 
 export const CartDropdownButton = styled(CustomButton)`

@@ -1,10 +1,10 @@
 import styled, { keyframes } from 'styled-components';
 
 export const StyledHero = styled.div`
-  top: 0;
-  left: 0;
-  margin-bottom: 3vh;
-  height: 75vh;
+  margin-top: 0;
+  margin-left: 0;
+  margin-bottom: 5em;
+height: 80vh;
   width: 100vw;
   overflow: hidden;
   font-family: 'Yellowtail', cursive;
@@ -31,17 +31,10 @@ export const HeaderHeroImg = styled.img`
   opacity: 1;
   z-index: 0;
   width: 100%;
-  @media (min-width: 300px) {
-    display: flex;
-    height: 60%;
-    width: 100%;
-    img {
-      overflow-x: none;
-    }
-  }
-  @media (min-width: 768px) {
-    height: 70vh;
-    object-fit: cover;
+  margin-top: 0;
+
+  @media (max-width: 800px) {
+    margin-top: 5em;
   }
 `;
 
@@ -50,14 +43,11 @@ export const HeroText = styled.h1`
   color: white;
   z-index: 21;
   margin-bottom: 25px;
-  font-size: 72px;
-  @media (min-width: 300px) {
-    position: absolute;
-    font-size: 42px;
-    margin: 15vh auto;
-  }
-  @media (min-width: 768px) {
-    width: 40%;
+  font-size: 84px;
+position: absolute;
+top: 50%;left: 8%;
+  @media (max-width: 800px) {
+    width: 70%;
     margin: 45vh 15vw;
     font-size: 56px;
     text-shadow: 0px 1.5px 2px rgba(0, 0, 0, 0.65);

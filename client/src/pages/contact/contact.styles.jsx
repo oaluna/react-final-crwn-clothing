@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-export const SignInAndSignUpContainer = styled.div`
+export const ContactContainer = styled.div`
   width: 900px;
   display: flex;
   justify-content: space-between;
@@ -8,6 +8,6 @@ export const SignInAndSignUpContainer = styled.div`
 
   @media and (max-width: 900px) {
     flex-direction: column;
-    align-items:center;
+    align-items: center;
   }
 `;

@@ -29,13 +29,13 @@ const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
         <div onClick={() => addItem(cartItem)}>&#10095;</div>
       </QuantityContainer>
       <TextContainer>
-        x<span style={{ marginRight: '15%' }} /> ${pricingText}
-        <span style={{ marginRight: '15%' }} />
+        x ${pricingText}
+
       </TextContainer>
       <RemoveButtonContainer className="remove" onClick={() => clearItem(cartItem)}>
         &#10005;
       </RemoveButtonContainer>
-<label htmlFor="remove" className="removeLabel">Click to Remove</label>
+
     </CheckoutItemContainer>
   );
 };

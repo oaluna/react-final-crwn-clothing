@@ -10,13 +10,16 @@ export const CartContainer = styled.div`
   align-items: flex-start;
   justify-content: flex-end;
   cursor: pointer;
-`;
+  `;
 
 export const ShoppingIcon = styled(ShoppingIconSVG)`
   width: 24px;
   height: 24px;
   background: none;
   align-items: center;
+@media and (max-width: 800px) {
+  padding: 45px 0 0 0;
+}
 `;
 
 export const ItemCountContainer = styled.span`

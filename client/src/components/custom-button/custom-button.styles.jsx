@@ -1,14 +1,16 @@
 import styled, { css } from 'styled-components';
 
 const buttonStyles = css`
-  background-color: black;
+  background: linear-gradient(
+    245deg,
+    rgba(118, 50, 89, 1) 0%,
+    rgba(136, 110, 107, 1) 85%
+  );
   color: white;
   border: none;
 
   &:hover {
-    background-color: white;
     color: black;
-    border: 1px solid black;
   }
 `;
 

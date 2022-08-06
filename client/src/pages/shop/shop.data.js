@@ -149,7 +149,7 @@ const SHOP_DATA = [
   {
     id: 4,
     title: 'Best Wishes',
-    route: 'well-wishes',
+    route: '/shop/well-wishes',
     items: [
       {
         imageUrl:
