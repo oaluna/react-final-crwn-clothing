@@ -1,73 +1,107 @@
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import { addItemToCart } from './../../redux/cart/cart.utils';
 
 export const HeaderContainer = styled.div`
-  height: 75px;
+  height: 100px;
   width: 100%;
   display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
-  margin: 10px;
+  margin: 0 auto;
+  padding: 0;
 
   @media screen and (max-width: 800px) {
     height: 70px;
     padding: auto;
     margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-evenly;
   }
-`
+`;
 
 export const HeaderTitle = styled.h2`
   display: flex;
-  height: 100%;
+
   width: 100%;
-  padding: auto;
-  margin: auto;
-  color: white;
+
   text-shadow: 1px 0px 10px #000;
   font-weight: 600;
   font-size: 18px;
+  padding: 0 auto;
+  margin: 0 auto;
   &:hover {
-    color: goldenrod;
+    color: crimson;
   }
   @media screen and (max-width: 800px) {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
   }
-`
+`;
 
-export const LogoContainer = styled(Link)`
-  height: 50%;
-  width: 100px;
-  margin: auto;
-
+export const LogoContainer = styled.span`
+  padding: auto;
+  & img {
+    margin: 0 0 0 15em;
+    height: auto;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+  }
   @media screen and (max-width: 800px) {
-    display: none;
+    display: flex;
+    flex-direction:column;
+    width: 100vw;
+    align-items: center;
+    padding-right: 50%;
+padding-top: 35px;
+    text-align: center;
+    transform: scale(1.2);
   }
-`
+`;
 
 export const OptionsContainer = styled.div`
   width: 50%;
   height: 100%;
   display: flex;
+
   align-items: center;
-  justify-content: flex-end;
+  margin: 2em auto 0 auto;
+  padding: auto;
   &:hover {
-    color: goldenrod;
+    color: crimson;
   }
 
   @media screen and (max-width: 800px) {
-    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    justify-content: space-evenly;
+position: relative;
+    margin-left: -4em;
+    margin-top: 0;
   }
-`
+`;
 
 export const OptionLink = styled(Link)`
+  color: black;
   padding: 25px;
   height: 100%;
-  font-size: 24px;
-  color: white;
-  text-shadow: 1px 0px 10px #000;
-  font-weight: bold;
+  font-size: 18px;
+
+  font-weight: 700;
   cursor: pointer;
   &:hover {
-    color: goldenrod;
+    color: rgba(118, 50, 89, 1);
   }
-`
+  @media and (max-width:800px) {
+    padding: 0;
+  }
+`;

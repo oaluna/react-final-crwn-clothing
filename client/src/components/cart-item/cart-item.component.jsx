@@ -6,13 +6,13 @@ import {
   CartItemImage
 } from './cart-item.styles';
 
-const CartItem = ({ item: { imageUrl, price, name, quantity } }) => (
+const CartItem = ({ item: { imageUrl, pricingText, name, quantity }}) => (
   <CartItemContainer>
     <CartItemImage src={imageUrl} alt='item' />
     <ItemDetailsContainer>
-      <span>{name}</span>
+      <span style={{width:'50%'}}>{name}</span>{' '}{' '}
       <span>
-        {quantity} x ${price}
+        {quantity}{' '}<small>x</small>{' '}${pricingText.toFixed(2)}
       </span>
     </ItemDetailsContainer>
   </CartItemContainer>

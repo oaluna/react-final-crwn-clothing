@@ -9,31 +9,44 @@ import {
   AddButton,
   BackgroundImage,
   NameContainer,
-  PriceContainer
+  PriceContainer,
+  DescriptionContainer,
 } from './collection-item.styles';
 
 const CollectionItem = ({ item, addItem }) => {
-  const { name, price, imageUrl } = item;
+  const { name, pricingText, shortDescription, imageUrl } = item;
 
   return (
     <CollectionItemContainer>
-      <BackgroundImage className='image' imageUrl={imageUrl} />
-      <CollectionFooterContainer>
-        <NameContainer>{name}</NameContainer>
-        <PriceContainer>{price}</PriceContainer>
+      <BackgroundImage className="image" imageUrl={imageUrl} alt="product" />
+      <NameContainer>
+        <span>{name} </span>
+        <PriceContainer>{`$` + `${pricingText.toFixed(2)}`}</PriceContainer>
+        <br />
+        <br />
+      </NameContainer>
+      <CollectionFooterContainer className="CollectionFooter">
+        <DescriptionContainer>
+          <NameContainer style={{flexDirection: 'row',alignItems:'flex-start'}}>
+            <span>{name} </span>
+            <br />
+            <br />
+            <PriceContainer>{`$` + `${pricingText.toFixed(2)}`}</PriceContainer>
+          </NameContainer>
+            {shortDescription}
+          <br />
+          <br />
+        </DescriptionContainer>
+        <AddButton onClick={() => addItem(item)} inverted>
+          Add to cart
+        </AddButton>
       </CollectionFooterContainer>
-      <AddButton onClick={() => addItem(item)} inverted>
-        Add to cart
-      </AddButton>
     </CollectionItemContainer>
   );
 };
 
-const mapDispatchToProps = dispatch => ({
-  addItem: item => dispatch(addItem(item))
+const mapDispatchToProps = (dispatch) => ({
+  addItem: (item) => dispatch(addItem(item)),
 });
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(CollectionItem);
+export default connect(null, mapDispatchToProps)(CollectionItem);

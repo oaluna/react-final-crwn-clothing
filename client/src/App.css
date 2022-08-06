@@ -1,18 +1,15 @@
 body {
-  font-family: 'Open Sans Condensed';
-  padding: 20px 60px;
-  background: url('https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+  font-family: 'Raleway', sans-serif;
+  padding: 20px 0px;
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 * {
   box-sizing: border-box;
-  color: white;
+  color: black;
 }

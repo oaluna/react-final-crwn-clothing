@@ -3,12 +3,15 @@ import styled from 'styled-components';
 export const CollectionPreviewContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
+padding: 14px;
+
   &:hover {
     cursor: pointer;
     & .background-image {
+      overflow: visible;
       transform: scale(1.1);
       transition: transform 2.2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      left: 5em;
     }
     & .content {
       transition: transform 2.2s;
@@ -23,7 +26,9 @@ export const CollectionPreviewContainer = styled.div`
   }
 
   @media screen and (max-width: 800px) {
+
     align-items: center;
+
     &:hover {
     cursor: pointer;
     & .background-image {
@@ -46,21 +51,41 @@ export const CollectionPreviewContainer = styled.div`
 `;
 
 export const TitleContainer = styled.h1`
-  font-size: 28px;
-  font-weight: 600;
+  width: 100vw;
+  font-size: 36px;
+  font-weight: 100;
   margin-bottom: 25px;
+  margin-left: 60px;
+  padding: 5px 5em;
   cursor: pointer;
-  color: white;
-
+  font-family: 'Yellowtail', cursive;
+height: 2px;
+  background: linear-gradient(
+    245deg,
+    rgba(118, 50, 89, 1) 5%,
+    rgba(136, 110, 107, 0) 95%
+  );
+  display:flex;
+  flex-direction: row;align-items: flex-end;
+color: black;
   &:hover {
-    color: goldenrod;
+      color:  rgba(136, 110, 107, 1);
+  }
+  @media (max-width: 800px) {
+    flex-direction:column;
+    align-items:flex-start;
+    margin: 3em;
+    justify-content: flex-start;
+    padding: 0 3em;
   }
 `;
 
 export const PreviewContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-
+  max-width: 80vw;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 15px 15px;
+  margin: 5px auto;
 
   @media screen and (max-width: 800px) {
     display: grid;

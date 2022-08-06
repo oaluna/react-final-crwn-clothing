@@ -1,38 +1,43 @@
 const INITIAL_STATE = {
   sections: [
     {
-      title: 'hats',
-      imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+      title: 'All Occasions',
+      imageUrl:
+        'https://res.cloudinary.com/dgdnpkfun/image/upload/v1656003850/arrangements/phaelenopsis-orchid-garden_seodpx.png',
       id: 1,
-      linkUrl: 'shop/hats'
+      linkUrl: 'shop/all-occasions',
     },
     {
-      title: 'jackets',
-      imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+      title: 'Bridal',
+      imageUrl:
+        'https://res.cloudinary.com/dgdnpkfun/image/upload/v1656003850/arrangements/metropolitan-design_fashox.png',
       id: 2,
-      linkUrl: 'shop/jackets'
+      linkUrl: 'shop/bridal',
     },
     {
-      title: 'sneakers',
-      imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+      title: 'Holidays',
+      imageUrl:
+        'https://res.cloudinary.com/dgdnpkfun/image/upload/v1656003850/arrangements/citys-tulips-design_nqwe7c.png',
       id: 3,
-      linkUrl: 'shop/sneakers'
+      linkUrl: 'shop/holidays',
     },
     {
-      title: 'womens',
-      imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+      title: 'Well Wishes',
+      imageUrl:
+        'https://res.cloudinary.com/dgdnpkfun/image/upload/v1656003846/arrangements/asymmetric-centerpiece-design_anphoq.png',
       size: 'large',
       id: 4,
-      linkUrl: 'shop/womens'
+      linkUrl: 'shop/well-wishes',
     },
     {
-      title: 'mens',
-      imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+      title: 'Deals',
+      imageUrl:
+        'https://res.cloudinary.com/dgdnpkfun/image/upload/v1656003850/arrangements/masculine-fathers-day_gnl5x6.png',
       size: 'large',
       id: 5,
-      linkUrl: 'shop/mens'
-    }
-  ]
+      linkUrl: 'shop/deals',
+    },
+  ],
 };
 
 const directoryReducer = (state = INITIAL_STATE, action) => {
