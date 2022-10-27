@@ -37,6 +37,6 @@ export const selectCollectionItem = createSelector(
   [selectCollections],
   (collections) =>
     collections.items
-      ? Object.keys(items).map((key) => collection.items[key])
+      ? Object.keys(collections.items).map((collection) => collection.items[collection.key])
       : []
 );

@@ -22,7 +22,7 @@ const CollectionPage = ({ collection,ItemPage, match }) => {
         ))}
       </CollectionItemsContainer>
        <Route
-          path={`${match.path}/:collectionId/:${items.item.id}`} component={CollectionItemPage} />
+          path={`${match.path}/:collectionId/:${items.item.id}`} component={CollectionPage} />
     </CollectionPageContainer>
   );
 };
