@@ -11,7 +11,7 @@ import {
   CollectionItemsContainer
 } from './collection.styles';
 
-const CollectionPage = ({ collection }) => {
+const CollectionPage = ({ collection,ItemPage, match }) => {
   const { title, items } = collection;
   return (
     <CollectionPageContainer>
@@ -22,7 +22,7 @@ const CollectionPage = ({ collection }) => {
         ))}
       </CollectionItemsContainer>
        <Route
-          path={`${match.path}/:collectionId/:${items.item.id}`} component={ItemPage} />
+          path={`${match.path}/:collectionId/:${items.item.id}`} component={CollectionItemPage} />
     </CollectionPageContainer>
   );
 };
