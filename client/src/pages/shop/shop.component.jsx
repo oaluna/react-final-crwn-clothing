@@ -1,36 +1,79 @@
 import React, { useState, useEffect } from 'react';
-import { Route } from 'react-router-dom';
-import { connect } from 'react-redux';
-import CollectionsOverviewContainer from '../../components/collections-overview/collections-overview.container';
-import CollectionPageContainer from '../collection/collection.container';
-import { fetchCollectionsStart } from '../../redux/shop/shop.actions';
-import SHOP_DATA from './shop.data.js';
+import { useHistory } from 'react-router-dom';
+import ProductCard from '../../components/product-card/product-card.component';
+import { database } from '../../firebase/firebase.utils';
+import { ShopPageContainer, ShopProductGrid } from './shop.styles';
 
-import CollectionPreview from '../../components/collection-preview/collection-preview.component';
+const ShopPage = () => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const history = useHistory();
 
-const ShopPage = ({ fetchCollectionsStart, match, ...props }) =>{
-  const [collections, setCollections] = useState(SHOP_DATA);
+  useEffect(() => {
+    const productsRef = database.ref('products');
 
-    return (
-      <div className='shop-page'>
-        {collections.map(({ id, ...otherCollectionProps }) => (
-          <CollectionPreview key={id} {...otherCollectionProps} />
-        ))}
-        <Route
-          exact
-          path={`${match.path}`}
-          component={CollectionsOverviewContainer}
-        />
-        <Route
-          path={`${match.path}/:collectionId`}
-          component={CollectionPageContainer}
-        />
-      </div>
-    );
-}
+    const handleValue = (snapshot) => {
+      const data = snapshot.val();
+      const loadedProducts = [];
 
-const mapDispatchToProps = (dispatch) => ({
-  fetchCollectionsStart: () => dispatch(fetchCollectionsStart())
-});
+      if (data) {
+        Object.entries(data).forEach(([key, val]) => {
+          const category = val.category || val.collection || val.collectionId || '';
+          const collectionRoute = category ? encodeURI(String(category).toLowerCase()) : '';
 
-export default connect(null, mapDispatchToProps)(ShopPage);
+          loadedProducts.push({
+            id: key,
+            name: val.name || val.title || 'Untitled product',
+            description: val.description || val.shortDescription || '',
+            price: val.price || val.pricingText || 0,
+            imgUrl: val.imgUrl || val.imageUrl || '',
+            category,
+            collectionRoute,
+          });
+        });
+      }
+
+      setProducts(loadedProducts);
+      setLoading(false);
+    };
+
+    const handleError = (err) => {
+      console.error('Fetch products failed', err);
+      setLoading(false);
+    };
+
+    productsRef.on('value', handleValue, handleError);
+
+    return () => productsRef.off('value', handleValue);
+  }, []);
+
+  const handleCardClick = (product) => {
+    const route = product.collectionRoute || '';
+
+    if (route) {
+      history.push(`/shop/${route}/${product.id}`);
+    } else {
+      history.push(`/shop/${product.id}`);
+    }
+  };
+
+  return (
+    <ShopPageContainer>
+      {loading ? (
+        <p>Loading products...</p>
+      ) : (
+        <ShopProductGrid>
+          {products.map((product) => (
+            <ProductCard
+              key={product.id}
+              product={product}
+              onClick={() => handleCardClick(product)}
+            />
+          ))}
+        </ShopProductGrid>
+      )}
+    </ShopPageContainer>
+  );
+};
+
+export default ShopPage;

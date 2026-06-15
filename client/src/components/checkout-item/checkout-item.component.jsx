@@ -16,11 +16,11 @@ import {
 } from './checkout-item.styles';
 
 const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
-  const { name, imageUrl, pricingText, quantity } = cartItem;
+  const { name, imgUrl, price, quantity } = cartItem;
   return (
     <CheckoutItemContainer>
       <ImageContainer>
-        <img src={imageUrl} alt="item" />
+        <img src={imgUrl} alt="item" />
       </ImageContainer>
       <TextContainer>{name}</TextContainer>
       <QuantityContainer>
@@ -29,7 +29,7 @@ const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
         <div onClick={() => addItem(cartItem)}>&#10095;</div>
       </QuantityContainer>
       <TextContainer>
-        x ${pricingText}
+        x ${price}
 
       </TextContainer>
       <RemoveButtonContainer className="remove" onClick={() => clearItem(cartItem)}>

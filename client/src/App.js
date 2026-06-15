@@ -7,6 +7,7 @@ import './App.css';
 
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component';
+import ProductCard from './components/product-card/product-card.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import CheckoutPage from './pages/checkout/checkout.component';
 import ContactPage from './pages/contact/contact.component';
@@ -25,6 +26,7 @@ const App = ({ checkUserSession, currentUser }) => {
         <Header />
         <Switch>
           <Route exact path='/' component={HomePage} />
+          <Route path='/shop/:collectionRoute/:productId' component={ProductCard} />
           <Route path='/shop' component={ShopPage} />
           <Route path='/contact' component={ContactPage}/>
           <Route exact path='/checkout' component={CheckoutPage} />

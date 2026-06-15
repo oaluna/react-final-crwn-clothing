@@ -1,16 +1,17 @@
 import firebase from '@firebase/app-compat';
 import '@firebase/firestore-compat';
 import '@firebase/auth-compat';
+import '@firebase/database-compat';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyA9azSseaNwwRK7sHbPg4VmSkkOv-ihzpE',
-  authDomain: 'glowing-flower.firebaseapp.com',
-  databaseURL: 'https://glowing-flower-default-rtdb.firebaseio.com',
-  projectId: 'glowing-flower',
-  storageBucket: 'glowing-flower.appspot.com',
-  messagingSenderId: '912214442669',
-  appId: '1:912214442669:web:8670e14e63373f2dafbc24',
-  measurementId: 'G-FP4QV6GRHK',
+apiKey: "AIzaSyC8NmJMIkLNbVIn8pjWuEYkmgzpTb3vTHk",
+  authDomain: "glowing-flower-dc00b.firebaseapp.com",
+  databaseURL: "https://glowing-flower-dc00b-default-rtdb.firebaseio.com",
+  projectId: "glowing-flower-dc00b",
+  storageBucket: "glowing-flower-dc00b.firebasestorage.app",
+  messagingSenderId: "549979508222",
+  appId: "1:549979508222:web:2a9baf7fbaaa2538cb44af",
+  measurementId: "G-6ZWY9975JX"
 };
 
 firebase.initializeApp(firebaseConfig);
@@ -85,6 +86,7 @@ export const getCurrentUser = () => {
 export const auth = firebase.auth();
 
 export const firestore = firebase.firestore();
+export const database = firebase.database();
 
 export const googleProvider = new firebase.auth.GoogleAuthProvider();
 googleProvider.setCustomParameters({ prompt: 'select_account' });

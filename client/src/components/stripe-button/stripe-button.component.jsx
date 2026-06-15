@@ -3,8 +3,8 @@ import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios';
 import ICON from '../../assets/ICON.png'
 
-const StripeCheckoutButton = ({ pricingText }) => {
-  const priceForStripe = pricingText * 100;
+const StripeCheckoutButton = ({ price }) => {
+  const priceForStripe = price * 100;
   const publishableKey =
     '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';
 

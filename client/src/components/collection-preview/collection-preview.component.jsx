@@ -21,7 +21,7 @@ const CollectionPreview = ({ title, items, history, match, route, id }) => (
         <CollectionItem
           key={item.id}
           item={item}
-
+          collectionRoute={route}
         />
       ))}
     </PreviewContainer>
