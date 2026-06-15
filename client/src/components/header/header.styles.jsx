@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { addItemToCart } from './../../redux/cart/cart.utils';
 
 export const HeaderContainer = styled.div`
   height: 100px;
