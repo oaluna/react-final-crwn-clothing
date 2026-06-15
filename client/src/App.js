@@ -26,7 +26,7 @@ const App = ({ checkUserSession, currentUser }) => {
         <Header />
         <Switch>
           <Route exact path='/' component={HomePage} />
-          <Route path='/shop/:collectionRoute/:productId' component={ProductCard} />
+          <Route path='/shop/:productId' component={ProductCard} />
           <Route path='/shop' component={ShopPage} />
           <Route path='/contact' component={ContactPage}/>
           <Route exact path='/checkout' component={CheckoutPage} />
