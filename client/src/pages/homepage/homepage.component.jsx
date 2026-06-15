@@ -22,9 +22,9 @@ const HomePage = ({ match, ...props }) => {
         if (data) {
           Object.entries(data).forEach(([key, val]) => {
             const category = val.category || val.collection || val.collectionId || '';
-            const collectionRoute = category
-              ? encodeURI(String(category).toLowerCase())
-              : '';
+            // const collectionRoute = category
+            //   ? encodeURI(String(category).toLowerCase())
+            //   : '';
 
             loadedProducts.push({
               id: key,
@@ -33,7 +33,7 @@ const HomePage = ({ match, ...props }) => {
               price: val.price || val.pricingText || 0,
               imgUrl: val.imgUrl || val.imageUrl || '',
               category: val.category || val.collectionRoute || '',
-              collectionRoute: val.collectionRoute || val.catgegory || '',
+       //       collectionRoute: val.collectionRoute || val.catgegory || '',
             });
           });
         }
