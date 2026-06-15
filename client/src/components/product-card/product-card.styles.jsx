@@ -10,11 +10,6 @@ export const ProductCardContainer = styled.div`
   cursor: pointer;
   transition: transform 1.05s ease, box-shadow 1.05s ease;
   min-height: 240px;
-
-  &:hover {
-    transform: translateY(-4px) scale(1.2);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
-  }
 `;
 
 export const ProductImage = styled.div`
