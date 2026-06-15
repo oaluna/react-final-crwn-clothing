@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { ParallaxProvider } from 'react-scroll-parallax';
 
-import { store, persistor } from './redux/store';
+import store, { persistor } from './redux/store';
 
 import './index.css';
 import App from './App';
