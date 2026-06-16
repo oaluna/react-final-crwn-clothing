@@ -18,11 +18,7 @@ const CollectionItem = ({ item, addItem, history, collectionRoute }) => {
   const { name, price, shortDescription, imgUrl, id } = item;
 
   const handleNavigate = () => {
-    if (collectionRoute) {
-      history.push(`/shop/${collectionRoute}/${id}`);
-    } else {
-      history.push(`/shop/${id}`);
-    }
+    history.push(`/shop/${id}`);
   };
 
   const handleAdd = (e) => {

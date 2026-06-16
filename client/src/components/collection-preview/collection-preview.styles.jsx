@@ -51,12 +51,13 @@ padding: 14px;
 `;
 
 export const TitleContainer = styled.h1`
-  width: 100vw;
+  width: 100%;
   font-size: 36px;
   font-weight: 100;
   margin-bottom: 25px;
   margin-left: 60px;
   padding: 5px 5em;
+  box-sizing: border-box;
   cursor: pointer;
   font-family: 'Yellowtail', cursive;
 height: 2px;

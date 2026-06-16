@@ -48,13 +48,7 @@ const ShopPage = () => {
   }, []);
 
   const handleCardClick = (product) => {
-    const route = product.collectionRoute || '';
-
-    if (route) {
-      history.push(`/shop/${route}/${product.id}`);
-    } else {
-      history.push(`/shop/${product.id}`);
-    }
+    history.push(`/shop/${product.id}`);
   };
 
   return (

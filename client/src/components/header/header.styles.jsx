@@ -8,13 +8,14 @@ export const HeaderContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
-  padding: 0;
+  margin: 0;
+  padding: 0 8vw;
+  box-sizing: border-box;
 
   @media screen and (max-width: 800px) {
     height: 70px;
     padding: auto;
-    margin-left: 60px;
+    margin-left: 8vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,8 +31,8 @@ export const HeaderTitle = styled.h2`
   text-shadow: 1px 0px 10px #000;
   font-weight: 600;
   font-size: 18px;
-  padding: 0 auto;
-  margin: 0 auto;
+  padding: 0;
+  margin: 0;
   &:hover {
     color: crimson;
   }
@@ -39,25 +40,25 @@ export const HeaderTitle = styled.h2`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
+    width: 100%;
   }
 `;
 
 export const LogoContainer = styled.span`
   padding: auto;
   & img {
-    margin: 0 0 0 15em;
+    margin: 0;
     height: auto;
     max-width: 300px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   }
   @media screen and (max-width: 800px) {
     display: flex;
     flex-direction:column;
-    width: 100vw;
-    align-items: center;
-    padding-right: 50%;
+    width: 100%;
+    align-items: flex-start;
+    
 padding-top: 35px;
     text-align: center;
     transform: scale(1.2);

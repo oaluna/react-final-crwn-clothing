@@ -3,9 +3,8 @@ import styled from 'styled-components';
 export const HomePageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
-  padding: 20px;
   box-sizing: border-box;
 `;
 
@@ -15,7 +14,7 @@ export const HomeProductGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, minmax(240px, 1fr));
   gap: 24px;
-  margin-top: 24px;
+  margin: 24px 8vw;
 
   @media screen and (max-width: 960px) {
     grid-template-columns: repeat(3, minmax(220px, 1fr));
