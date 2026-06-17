@@ -10,16 +10,7 @@ const Hero = () => {
         alt="flower arrangements"
       />
       <HeroText>The 
-        <h1 style={{
-          background: "red",
-    background: "-webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet)",
-    background: "-o-linear-gradient(right, orange, yellow, green, cyan, blue, violet)",
-    background: "-moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet)",
-    background: "linear-gradient(to right, orange , yellow, green, cyan, blue, violet)",
-    backgroundClip: "text",
-    textFillColor: "transparent",
-    fontSize: "20vw"
-        }}>Artistry</h1> of Blooms</HeroText>
+        <h1 id="gradient">Artistry of Blooms</h1></HeroText>
       <HeroDescription>
 Every stem I touch carries a story of resilience, transformation, longing, celebration of love and joy. My floral work isn't about perfection. It's about feeling. I design the way an artist paints across a canvas, intuitively, fearlessly, and with deep respect for texture, shape, color and space.
 
