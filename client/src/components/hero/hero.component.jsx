@@ -9,7 +9,17 @@ const Hero = () => {
         src="https://res.cloudinary.com/dgdnpkfun/image/upload/v1658961605/arrangements/pexels-photo-1158783_zyt4l2.jpg"
         alt="flower arrangements"
       />
-      <HeroText>The Artistry of Blooms</HeroText>
+      <HeroText>The 
+        <h1 style={{
+          background: "red",
+    background: "-webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet)",
+    background: "-o-linear-gradient(right, orange, yellow, green, cyan, blue, violet)",
+    background: "-moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet)",
+    background: "linear-gradient(to right, orange , yellow, green, cyan, blue, violet)",
+    backgroundClip: "text",
+    textFillColor: "transparent",
+    fontSize: "20vw"
+        }}>Artistry</h1> of Blooms</HeroText>
       <HeroDescription>
 Every stem I touch carries a story of resilience, transformation, longing, celebration of love and joy. My floral work isn't about perfection. It's about feeling. I design the way an artist paints across a canvas, intuitively, fearlessly, and with deep respect for texture, shape, color and space.
 
