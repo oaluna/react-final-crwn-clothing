@@ -50,13 +50,21 @@ export const HeroText = styled.h1`
   color: white;
   z-index: 21;
   margin: 0;
-  line-height: 0;
+  line-height: 0.9;
   padding: 0;
   font-size: 84px;
   position: absolute;
   top: 20%;
   left: 8%;
   max-width: 600px;
+
+  .rainbow {
+    background: linear-gradient(90deg, #ff0051, #ff7300, #ffeb00, #2cff65, #00d6ff, #6b5bff, #ff00b3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
 
   @media (max-width: 800px) {
     width: 70%;
