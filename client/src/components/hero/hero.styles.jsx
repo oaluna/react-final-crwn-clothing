@@ -50,6 +50,7 @@ export const HeroText = styled.h1`
   color: white;
   z-index: 21;
   margin: 0;
+  line-height: 0;
   padding: 0;
   font-size: 84px;
   position: absolute;
