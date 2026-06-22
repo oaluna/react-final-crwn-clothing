@@ -67,10 +67,8 @@ export const HeroText = styled.h1`
   }
 
   @media (max-width: 800px) {
-    width: 70%;
     margin: 0;
     font-size: 56px;
-    text-shadow: 0px 1.5px 2px rgba(0, 0, 0, 0.65);
     opacity: 1;
     z-index: 5;
     animation: ${FadeInAnimation} 0.3s ease-in;
