@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 
 const PhilosophyContainer = styled.section`
-  padding: 80px 20px;
+  padding: 8vh 8vw;
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
