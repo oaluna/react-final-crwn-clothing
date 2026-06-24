@@ -1,10 +1,23 @@
 import React, { useState } from 'react';
 
 import {
+ CardWrapper,
+  ImageContainer,
+  Tag,
+  PriceTag,
+  ContentArea,
+  Title,
+  Subtitle,
+  OptionsRow,
+  OptionGroup,
+  OptionLabel,
+  ColorSelectors,
+  ColorDot,
+  SizeSelect,
+  ButtonRow,
+  ActionButton,
   ProductCardWrapper
 } from './product-card.styles';
-
-import { ShoppingIcon } from '../cart-icon/cart-icon.styles';
 
 const ProductCard = ({ product, onClick }) => {
   const [clicked, setClicked] = useState(false);
@@ -18,55 +31,44 @@ const ProductCard = ({ product, onClick }) => {
 
   const { name, description, price, imgUrl, category } = product;
 
-  return (
-    <ProductCardWrapper>
-      <div className="container">
-        <div className="top">
-          <h1>{name}</h1>
-        </div>
-        <div className="bottom">
-          <div className="left">
-            <div className="details">
-              <h1>Chair</h1>
-              <p>£250</p>
-            </div>
-            <div className="buy"><i className="material-icons">add_shopping_cart</i></div>
-          </div>
-          <div className="right">
-            <div className="done"><i className="material-icons">done</i></div>
-            <div className="details">
-              <h1>Chair</h1>
-              <p>Added to your cart</p>
-            </div>
-            <div className="remove"><i className="material-icons">clear</i></div>
-          </div>
-        </div>
-      </div>
-      <div className="inside">
-        <div className="icon"><i className="material-icons">info_outline</i></div>
-        <div className="contents">
-          <table>
-            <thead></thead>
-            <tbody>
-            <tr>
-             
-              <td>Category</td>
-              <td>{category}</td>
-            </tr>
-            <tr>
-              <td>Description</td>
-              <td>{description}</td>
-            </tr>
-            <tr>
-              <td>Price</td>
-              <td>£{price}</td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </ProductCardWrapper>
-  )
-};
+    const [selectedColor, setSelectedColor] = useState('#272b3f');
+    
+    const colors = ['#272b3f', '#c9c2b6', '#872a31'];
+  
+    return (
+    
+        <CardWrapper onClick ={onClick}>
+          
+          <ImageContainer>
+            <img src={imgUrl} />
+            <Tag>New</Tag>
+            <PriceTag>
+              <span>$</span>49
+            </PriceTag>
+          </ImageContainer>
+  
+          {/* Bottom Content Section */}
+          <ContentArea>
+            <Title>The Archer</Title>
+            <Subtitle>Men's Standard Fit Short Sleeve T-Shirt</Subtitle>
+  
+            
+  
+            {/* Action Buttons */}
+            <ButtonRow>
+              <ActionButton aria-label="Add to wishlist">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </ActionButton>
+              <ActionButton primary>
+                Add to Cart
+              </ActionButton>
+            </ButtonRow>
+  
+          </ContentArea>
+        </CardWrapper>
+        )
+      }
 
-export default ProductCard;
+      export default ProductCard;

@@ -15,8 +15,9 @@ import {
   ProductCategory,
   ButtonRow,
   ProductMeta,
-  ProductMetaLabel,
+  ProductMetaLabel
 } from './product.styles';
+import { ActionButton } from "../../components/product-card/product-card.styles"
 
 const ProductPage = ({ addItem }) => {
   const { productId } = useParams();
@@ -83,12 +84,12 @@ const ProductPage = ({ addItem }) => {
   return (
     <ProductPageContainer>
       <ButtonRow>
-        <button type="button" onClick={handleGoBack}>
+        <ActionButton type="button" onClick={handleGoBack}>
           Back
-        </button>
-        <button type="button" onClick={handleAddToCart}>
+        </ActionButton>
+        <ActionButton type="button" onClick={handleAddToCart}>
           Add to cart
-        </button>
+        </ActionButton>
       </ButtonRow>
       <ProductDetailGrid>
         <ProductImage imageUrl={product.imgUrl} />

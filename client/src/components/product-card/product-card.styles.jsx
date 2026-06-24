@@ -1,186 +1,161 @@
 import styled from 'styled-components';
 
-export const ProductCardWrapper = styled.div({ })`
-
+export const CardWrapper = styled.div`
   width: 300px;
-  height: 500px;
-  background: white;
-  margin: auto;
-  position: relative;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   overflow: hidden;
-  border-radius: 12px 12px 12px 12px;
-  box-shadow: 0;
-  transform: scale(0.95);
-  transition: box-shadow 0.5s, transform 0.5s;
-  &:hover{
-    transform: scale(1);
-    box-shadow: 5px 20px 30px rgba(0,0,0,0.2);
-  }
-  
-  div.container{
-    width:100%;
-    height:100%;
-    .top{
-      height: 80%;
-      width:100%;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-image: url(props => toString(props.imgUrl));
+  position: relative;
+  transition: transform 0.3s ease;
 
-      background-size: 100%;
-    }
-    .bottom{
-      width: 100%;
-      height: 20%;
-      transition: transform 0.5s;
-      &.clicked{
-        transform: translateX(-50%);
-      }
-      h1{
-          margin:0;
-          padding:0;
-      }
-      p{
-          margin:0;
-          padding:0;
-      }
-      .left{
-        height:100%;
-        width: 50%;
-        background: #f4f4f4;
-        position:relative;
-        float:left;
-        .details{
-          padding: 20px;
-          float: left;
-          width: calc(70% - 40px);
-        }
-        .buy{
-          float:right;
-          width: calc(30% - 2px);
-          height:100%;
-          background: #f1f1f1;
-          transition: background 0.5s;
-          border-left:solid thin rgba(0,0,0,0.1);
-          i{
-            font-size:30px;
-            padding:30px;
-            color: #254053;
-            transition: transform 0.5s;
-          }
-          &:hover{
-            background: #A6CDDE;
-          }
-          &:hover i{
-            transform: translateY(5px);
-            color:#00394B;
-          }
-        }
-      }
-      .right{
-        width: 50%;
-        background: #A6CDDE;
-        color: white;
-        float:right;
-        height:200%;
-        overflow: hidden;
-        .details{
-          padding: 20px;
-          float: right;
-          width: calc(70% - 40px);
-        }
-        .done{
-          width: calc(30% - 2px);
-          float:left;
-          transition: transform 0.5s;
-          border-right:solid thin rgba(255,255,255,0.3);
-          height:50%;
-          i{
-            font-size:30px;
-            padding:30px;
-            color: white;
-          }
-        }
-        .remove{
-          width: calc(30% - 1px);
-          clear: both;
-          border-right:solid thin rgba(255,255,255,0.3);
-          height:50%;
-          background: #BC3B59;
-          transition: transform 0.5s, background 0.5s;
-          &:hover{
-            background: #9B2847;
-          }
-          &:hover i{
-            transform: translateY(5px);
-          }
-          i{
-            transition: transform 0.5s;
-            font-size:30px;
-            padding:30px;
-            color: white;
-          }
-        }
-        &:hover{
-          .remove, .done{
-            transform: translateY(-100%);
-          }
-        }
-      }
+  &:hover {
+    transform: translateY(-5px);
+  }
+`;
+
+export const ImageContainer = styled.div`
+  height: 300px;
+  width: 100%;
+  background-position: center;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  position:relative;
+  z-index: 0;
+`;
+
+export const Tag = styled.div`
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: var(--color-primary);
+  color: white;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 3px;
+  letter-spacing: 1px;
+`;
+
+export const PriceTag = styled.div`
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-primary);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 10;
   
+  span {
+    font-size: 12px;
+    margin-right: 2px;
+    margin-top: -5px;
+  }
+`;
+
+export const ContentArea = styled.div`
+  padding: 30px 20px 20px;
+`;
+
+export const Title = styled.h2`
+  margin: 0 0 10px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-primary);
+  z-index: 10;
+`;
+
+export const Subtitle = styled.p`
+  margin: 0 0 20px;
+  font-size: 14px;
+  color: #888;
+  line-height: 1.5;
+`;
+
+export const ColorSelectors = styled.div`
+  display: flex;
+  gap: 8px;
+`;
+
+export const ColorDot = styled.button`
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid ${props => props.selected ? '#333' : 'transparent'};
+  background-color: ${props => props.color};
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  box-shadow: inset 0 0 0 2px #fff;
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-color: #333;
+  }
+`;
+
+export const SizeSelect = styled.select`
+  appearance: none;
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 5px 25px 5px 10px;
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  outline: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23999%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 8px auto;
+
+  &:focus {
+    border-color: #aaa;
+  }
+`;
+
+export const ButtonRow = styled.div`
+  display: flex;
+  border-top: 1px solid #eee;
+  margin: 0 -20px -20px; /* Pull to edges */
+`;
+
+export const ActionButton = styled.button`
+  flex: ${props => props.primary ? '2' : '1'};
+  background: ${props => props.primary ? '#ff5a5f' : '#fff'};
+  color: ${props => props.primary ? '#fff' : '#888'};
+  border: none;
+  padding: 15px 0;
+  font-size: ${props => props.primary ? '13px' : '18px'};
+  font-weight: 700;
+  text-transform: ${props => props.primary ? 'uppercase' : 'none'};
+  letter-spacing: ${props => props.primary ? '1px' : 'normal'};
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-right: ${props => props.primary ? 'none' : '1px solid #eee'};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background: ${props => props.primary ? '#ff4046' : '#f9f9f9'};
+    color: ${props => props.primary ? '#fff' : '#ff5a5f'};
   }
   
-  .inside{
-    z-index:9;
-    background: #92879B;
-    width:140px;
-    height:140px;
-    position: absolute;
-    top: -70px;
-    right: -70px;
-    border-radius: 0px 0px 200px 200px;
-    transition: all 0.5s, border-radius 2s, top 1s;
-    overflow: hidden;
-    .icon{
-      position:absolute;
-      right:85px;
-      top:85px;
-      color:white;
-      opacity: 1;
-    }
-    &:hover{
-      width:100%;
-      right:0;
-      top:0;
-      border-radius: 0;
-      height:80%;
-      .icon{
-        opacity: 0;
-        right:15px;
-        top:15px;
-      }
-      .contents{
-        opacity: 1;
-        transform: scale(1);
-        transform: translateY(0);
-      }
-    }
-    .contents{
-      padding: 5%;
-      opacity: 0;
-      transform: scale(0.5);
-      transform: translateY(-200%);
-      transition: opacity 0.2s, transform 0.8s;
-   width: 100%;
-   height: 100%;
-      h1, p {
-        color: white;
-      }
-      p{
-        font-size:13px;
-      }
-    }
+  &:last-child {
+    border-right: none;
   }
-}
-`
+`;
+
