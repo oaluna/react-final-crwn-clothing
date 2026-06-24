@@ -101,7 +101,7 @@ const ErrorMessage = styled.div`
 `;
 
 const StripeCheckoutButton = ({ price }) => {
-  const stripe = useStripe();
+  const stripe = useStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY || '');
   const elements = useElements();
   const [processing, setProcessing] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');

@@ -13,6 +13,7 @@ export const StyledHero = styled.div`
   justify-content: center;
 `;
 
+
 const FadeInAnimation = keyframes`
 0% {
   opacity: 0;
@@ -29,16 +30,21 @@ const FadeInAnimation = keyframes`
   transition: 3s ease-in;
  }
 `;
+export const HeroMask = styled.span`
+width: 100%;
+height: 100%;
+-webkit-mask-image: -webkit-gradient(linear, left 0%, left bottom, from(rgb(255, 255, 255)), to(rgba(0,0,0,0)))
 
+`
 export const HeaderHeroImg = styled.img`
-  position: absolute;
-  top: 0;
-  left: 0;
+
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.75);
-  z-index: 0;
+  z-index: 10;
+
+}
+
 
   @media (max-width: 800px) {
     width: 100%;
@@ -55,8 +61,10 @@ export const HeroText = styled.h1`
   font-size: 84px;
   position: absolute;
   top: 20%;
-  left: 8%;
-  max-width: 600px;
+  left: auto;
+  max-width: 1200px;
+  text-align: center;
+
 
   .rainbow {
     background: linear-gradient(90deg, #ff0051, #ff7300, #ffeb00, #2cff65, #00d6ff, #6b5bff, #ff00b3);

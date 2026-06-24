@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import Hero from '../../components/hero/hero.component';
+import Philosophy from "../../components/philosophy/philosophy.component"
 import ProductCard from '../../components/product-card/product-card.component';
 import { database } from '../../firebase/firebase.utils';
 import { connect } from 'react-redux';
@@ -21,10 +22,7 @@ const HomePage = ({ match, ...props }) => {
 
         if (data) {
           Object.entries(data).forEach(([key, val]) => {
-            const category = val.category || val.collection || val.collectionId || '';
-            const collectionRoute = category
-               ? encodeURI(String(category).toLowerCase())
-              : '';
+    
 
             loadedProducts.push({
               id: key,
@@ -51,17 +49,15 @@ const HomePage = ({ match, ...props }) => {
     }, []);
 
     const handleCardClick = (product) => {
-      const route = product.collectionRoute || '';
-      if (route) {
+    
         history.push(`/shop/${product.id}`);
-      } else {
-        history.push(`/shop/${product.id}`);
-      }
+      
     };
 
     return (
       <HomePageContainer>
         <Hero />
+        <Philosophy />
         {loading ? (
           <p>Loading products...</p>
         ) : (
