@@ -5,6 +5,9 @@ import { StyledHero, HeroMask, HeaderHeroImg, HeroText, HeroDescription } from '
 const Hero = () => {
   return (
     <StyledHero>
+       <HeroDescription style={{background: "#7b1838"}}>
+This is more than floral design. It's "LIVING ART".
+      </HeroDescription>
       <Parallax>
       <HeroMask>
       <HeaderHeroImg
@@ -14,9 +17,7 @@ const Hero = () => {
       </HeroMask>
 
       <HeroText>The <span className="rainbow">Artistry</span> of Blooms</HeroText>
-      <HeroDescription>
-This is more than floral design. It's "LIVING ART".
-      </HeroDescription>
+     
       </Parallax>
     </StyledHero>
   );

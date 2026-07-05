@@ -1,27 +1,24 @@
 import styled, { css } from 'styled-components';
 
 const buttonStyles = css`
-  background: linear-gradient(
-    245deg,
-    rgba(118, 50, 89, 1) 0%,
-    rgba(136, 110, 107, 1) 85%
-  );
-  color: white;
+  background: linear-gradient(to right, var(--button-primary), var(--button-secondary));
+  color: var(--text-dark);
   border: none;
 
   &:hover {
-    color: black;
+    background: linear-gradient(to right, var(--button-secondary), var(--button-primary));
+    color: var(--text-dark);
   }
 `;
 
 const invertedButtonStyles = css`
-  background-color: white;
-  color: black;
-  border: 1px solid black;
+  background-color: var(--text-light);
+  color: var(--text-dark);
+  border: 1px solid var(--text-dark);
 
   &:hover {
-    background-color: black;
-    color: white;
+    background-color: var(--text-dark);
+    color: var(--text-light);
     border: none;
   }
 `;
@@ -53,7 +50,7 @@ export const CustomButtonContainer = styled.button`
   padding: 0 35px 0 35px;
   font-size: 15px;
   text-transform: uppercase;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 700;
   cursor: pointer;
   display: flex;

@@ -17,6 +17,12 @@ export const ShoppingIcon = styled(ShoppingIconSVG)`
   height: 24px;
   background: none;
   align-items: center;
+  fill: var(--text-light);
+
+  &:hover {
+    fill: var(--color-accent);
+  }
+
 @media and (max-width: 800px) {
   padding: 45px 0 0 0;
 }
@@ -27,4 +33,5 @@ export const ItemCountContainer = styled.span`
   font-size: 10px;
   font-weight: bold;
   bottom: 12px;
+  color: var(--text-light);
 `;

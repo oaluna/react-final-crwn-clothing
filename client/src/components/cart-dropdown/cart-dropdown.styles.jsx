@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import CustomButton from '../custom-button/custom-button.component';
 
 export const CartDropdownContainer = styled.div`
@@ -7,14 +8,14 @@ export const CartDropdownContainer = styled.div`
   height: 540px;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: var(--bg-light);
 
   padding: 15px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   top: 90px;
   right: 40px;
   z-index: 5;
-  color: white;
+  color: var(--text-dark);
   box-shadow: 0px 1.5px 5px rgba(0,0,0,0.3)
 `;
 

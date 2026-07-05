@@ -10,6 +10,8 @@ display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: space-between;
+background-color: var(--bg-dark);
+color: var(--text-light);
 @media screen and (max-width: 400px){
 padding: 0 2vw;
 }
@@ -26,7 +28,7 @@ export const HeaderTitle = styled.h2`
   padding: 0;
   margin: 0;
   &:hover {
-    color: crimson;
+    color: var(--color-accent);
   }
   @media screen and (max-width: 800px) {
     display: flex;
@@ -54,7 +56,7 @@ export const OptionsContainer = styled.ul`
   margin: 2em 0 0 auto;
   padding: auto;
   &:hover {
-    color: crimson;
+    color: var(--color-accent);
   }
 
   @media screen and (max-width: 800px) {
@@ -79,9 +81,9 @@ list-style: none;
   justify-content: space-between;
   margin: 0 2vw;
   font-weight: bold;
-  color: #333;
+  color: var(--text-light);
   &:hover {
-    color: crimson;
+    color: var(--color-accent);
 
   }
   @media screen and (max-width: 800px) {

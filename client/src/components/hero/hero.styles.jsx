@@ -2,13 +2,14 @@ import styled, { keyframes } from 'styled-components';
 
 export const StyledHero = styled.div`
   position: relative;
-  margin: 0;
+  margin: 0vh 0vw;
   padding: 0;
   height: 80vh;
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
-  font-family: 'Yellowtail', cursive;
+  font-family: 'Melodrama', serif;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
@@ -37,12 +38,13 @@ height: 100%;
 
 `
 export const HeaderHeroImg = styled.img`
-
-  width: 100%;
+position: relative;
+  width: 100vw;
   height: 100%;
+  object-position: center;
   object-fit: cover;
   z-index: 10;
-
+margin-top: 0vh;
 }
 
 
@@ -55,13 +57,17 @@ export const HeroText = styled.h1`
   font-weight: 500;
   color: white;
   z-index: 21;
-  margin: 0;
-  line-height: 0.9;
+  letter-spacing: -4px;
+  font-size: 260px;
+  margin: 30vh 8vw;
+  letter-spacing: -5px;
+  line-height: 1;
+  transform: skewX(-25deg);
   padding: 0;
-  font-size: 84px;
-  position: absolute;
-  top: 20%;
-  left: auto;
+  position: relative;
+  margin-top: -100vh;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 1200px;
   text-align: center;
 
@@ -71,6 +77,7 @@ export const HeroText = styled.h1`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    
     color: transparent;
   }
 
@@ -84,18 +91,21 @@ export const HeroText = styled.h1`
 `;
 
 export const HeroDescription = styled.p`
-  font-size: 18px;
-  font-family: 'Arial', sans-serif;
-  position: absolute;
-  top: 50%;
-  left: 8%;
-  max-width: 1000px;
-  text-align: left;
-  line-height: 1.5;
+  font-size: 24px;
+  position: relative;
+  top: 25%;
+  width: 100vw;
+  text-align: center;
+  line-height: 2;
   z-index: 21;
   color: white;
   margin: 0;
-  padding-right: 2rem;
+  padding-right: 2.2rem;
+  display: flex;
+  flex-wrap: rowwrap;
+  align-items: center;
+  justify-content: center;
+margin-top: 25px;
 
   @media (max-width: 800px) {
     font-size: 14px;

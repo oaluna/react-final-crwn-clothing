@@ -15,9 +15,9 @@ import {
   ProductCategory,
   ButtonRow,
   ProductMeta,
-  ProductMetaLabel
+  ProductMetaLabel,
+  ActionButton
 } from './product.styles';
-import { ActionButton } from "../../components/product-card/product-card.styles"
 
 const ProductPage = ({ addItem }) => {
   const { productId } = useParams();

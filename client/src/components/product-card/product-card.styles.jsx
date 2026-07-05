@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const CardWrapper = styled.div`
   width: 300px;
-  background: #fff;
+  height: 400px;
+  background: var(--bg-light);
   border-radius: 5px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   overflow: hidden;
@@ -18,7 +19,7 @@ export const ImageContainer = styled.div`
   height: 300px;
   width: 100%;
   background-position: center;
-
+padding: 20px;
   background-repeat: no-repeat;
   background-size: cover;
   position:relative;
@@ -30,7 +31,7 @@ export const Tag = styled.div`
   top: 15px;
   left: 15px;
   background: var(--color-primary);
-  color: white;
+  color: var(--text-light);
   padding: 5px 10px;
   font-size: 11px;
   font-weight: 700;
@@ -43,7 +44,7 @@ export const PriceTag = styled.div`
   position: absolute;
   bottom: -20px;
   right: 20px;
-  background: #fff;
+  background: var(--bg-light);
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -78,7 +79,7 @@ export const Title = styled.h2`
 export const Subtitle = styled.p`
   margin: 0 0 20px;
   font-size: 14px;
-  color: #888;
+  color: var(--text-dark);
   line-height: 1.5;
 `;
 
@@ -91,16 +92,16 @@ export const ColorDot = styled.button`
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 2px solid ${props => props.selected ? '#333' : 'transparent'};
+  border: 2px solid ${props => props.selected ? 'var(--text-dark)' : 'transparent'};
   background-color: ${props => props.color};
   cursor: pointer;
   padding: 0;
   outline: none;
-  box-shadow: inset 0 0 0 2px #fff;
+  box-shadow: inset 0 0 0 2px var(--bg-light);
   transition: border-color 0.2s ease;
 
   &:hover {
-    border-color: #333;
+    border-color: var(--text-dark);
   }
 `;
 
@@ -113,7 +114,7 @@ export const SizeSelect = styled.select`
   font-size: 13px;
   font-family: inherit;
   font-weight: 500;
-  color: #555;
+  color: var(--text-dark);
   cursor: pointer;
   outline: none;
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23999%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
@@ -129,13 +130,13 @@ export const SizeSelect = styled.select`
 export const ButtonRow = styled.div`
   display: flex;
   border-top: 1px solid #eee;
-  margin: 0 -20px -20px; /* Pull to edges */
+  margin: 100% -20px -20px; /* Pull to edges */
 `;
 
 export const ActionButton = styled.button`
   flex: ${props => props.primary ? '2' : '1'};
-  background: ${props => props.primary ? '#ff5a5f' : '#fff'};
-  color: ${props => props.primary ? '#fff' : '#888'};
+  background: ${props => props.primary ? 'var(--color-accent)' : 'var(--bg-light)'};
+  color: ${props => props.primary ? 'var(--text-light)' : 'var(--text-dark)'};
   border: none;
   padding: 15px 0;
   font-size: ${props => props.primary ? '13px' : '18px'};
@@ -150,12 +151,11 @@ export const ActionButton = styled.button`
   align-items: center;
 
   &:hover {
-    background: ${props => props.primary ? '#ff4046' : '#f9f9f9'};
-    color: ${props => props.primary ? '#fff' : '#ff5a5f'};
+    background: ${props => props.primary ? 'var(--color-success)' : '#f9f9f9'};
+    color: ${props => props.primary ? 'var(--text-light)' : 'var(--color-accent)'};
   }
   
   &:last-child {
     border-right: none;
   }
 `;
-

@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
-const subColor = 'grey';
-const mainColor = 'black';
+const subColor = 'var(--text-dark)';
+const mainColor = 'var(--text-dark)';
 
 const shrinkLabelStyles = css`
   top: -14px;
@@ -20,7 +20,7 @@ export const GroupContainer = styled.div`
 
 export const FormInputContainer = styled.input`
   background: none;
-  background-color: white;
+  background-color: var(--bg-light);
   color: ${subColor};
   font-size: 18px;
   padding: 10px 10px 10px 5px;

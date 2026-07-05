@@ -14,16 +14,16 @@ export const MenuItemContainer = styled.div`
   padding: 15px;
   overflow: hidden;
   box-shadow: 0px 2px 3.8px rgba(0, 0, 0, 0.23);
-  background: #f44274; /* fallback for old browsers */
+  background: var(--color-primary); /* fallback for old browsers */
   background: -webkit-linear-gradient(
     183deg,
-    rgba(244, 66, 116, 0.11) 15%,
-    rgba(175, 254, 170, 0.06) 92%
+    rgba(118, 50, 89, 0.11) 15%,
+    rgba(175, 193, 149, 0.06) 92%
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     183deg,
-    rgba(244, 66, 116, 0.11) 15%,
-    rgba(175, 254, 170, 0.06) 92%
+    rgba(118, 50, 89, 0.11) 15%,
+    rgba(175, 193, 149, 0.06) 92%
   );
   &:hover {
     box-shadow: 0px 2px 4.5px rgba(0, 0, 0, 0.3);
@@ -93,14 +93,14 @@ export const ContentContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
+  border: 1px solid var(--text-dark);
   opacity: 0.7;
   position: absolute;
   &:hover {
     background: linear-gradient(
       138deg,
-      rgba(244, 66, 116, 0.61) 15%,
-      rgba(175, 254, 170, 0.56) 92%
+      rgba(118, 50, 89, 0.61) 15%,
+      rgba(175, 193, 149, 0.56) 92%
     );
   }
 
@@ -112,16 +112,16 @@ export const ContentContainer = styled.div`
 export const ContentTitle = styled.span`
   font-weight: bold;
   margin-bottom: 6px;
-  text-shadow: 1px 0px 10px #000;
+  text-shadow: 1px 0px 10px var(--bg-dark);
   font-size: 22px;
-  color: white;
+  color: var(--text-light);
 
 `;
 
 export const ContentSubtitle = styled.span`
   font-weight: lighter;
-  text-shadow: 1px 0px 10px #000;
+  text-shadow: 1px 0px 10px var(--bg-dark);
   font-size: 16px;
-  color: white;
+  color: var(--text-light);
 
 `;

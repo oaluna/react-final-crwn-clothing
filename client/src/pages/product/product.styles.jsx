@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const ProductPageContainer = styled.div`
   width: 100%;
   max-width: 1100px;
+  height: 100vh;
   margin: 0 auto;
   padding: 40px 20px;
   box-sizing: border-box;
@@ -23,20 +24,24 @@ export const ProductDetailGrid = styled.div`
 `;
 
 export const ProductImage = styled.div`
-  width: 100%;
-  min-height: 420px;
-  border-radius: 16px;
+ 
+  max-width: 100%;
+width: 40%;
+  min-height: 100%;
   background-image: ${({ imageUrl }) => `url(${imageUrl})`};
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  overflow: visible;
+  position: absolute;
+  right: 8vw;
 `;
 
 export const ProductInfo = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  height: 100%;
+  gap: 30px;
 `;
 
 export const ProductTitle = styled.h1`
@@ -48,7 +53,7 @@ export const ProductTitle = styled.h1`
 export const ProductDescription = styled.p`
   font-size: 1rem;
   line-height: 1.8;
-  color: #333;
+  color: var(--text-dark);
 `;
 
 export const ProductPrice = styled.span`
@@ -67,17 +72,48 @@ export const ProductCategory = styled.span`
   display: inline-flex;
   padding: 10px 14px;
   border-radius: 999px;
-  background: #f2f2f2;
-  color: #555;
+  background: var(--bg-medium);
+  color: var(--text-dark);
   font-size: 0.9rem;
 `;
 
 export const ButtonRow = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
   gap: 16px;
   flex-wrap: wrap;
 `;
 
+export const ActionButton = styled.button`
+  flex: ${props => props.primary ? '2' : '1'};
+  background: ${props => props.primary ? "var(--color-primary)": "var(--button-primary)"};
+  color: ${props => props.primary ? 'var(--text-light)' : 'var(--text-medium)'};
+  border: none;
+  border-radius: 5px;
+
+  padding: 5px 15px;
+  font-size: ${props => props.primary ? '13px' : '18px'};
+  font-weight: 700;
+  text-transform: ${props => props.primary ? 'uppercase' : 'none'};
+  letter-spacing: ${props => props.primary ? '1px' : 'normal'};
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-right: ${props => props.primary ? 'none' : '1px solid var(--bg-dark)'};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background: ${props => props.primary ? 'var(--color-accent)' : 'var(--bg-light)'};
+    color: ${props => props.primary ? 'var(--text-light)' : 'var(--color-accent)'};
+  }
+  
+  &:last-child {
+    border-right: none;
+  }
+`;
 export const ProductMeta = styled.div`
   display: flex;
   flex-direction: column;
@@ -86,5 +122,5 @@ export const ProductMeta = styled.div`
 
 export const ProductMetaLabel = styled.span`
   font-size: 0.9rem;
-  color: #666;
+  color: var(--text-medium);
 `;
