@@ -13,6 +13,7 @@ import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up
 import CheckoutPage from './pages/checkout/checkout.component';
 import ContactPage from './pages/contact/contact.component';
 import Header from './components/header/header.component';
+import Footer from './components/footer/footer.component';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
 
@@ -36,9 +37,7 @@ const App = ({ checkUserSession, currentUser }) => {
                     ) : (<SignInAndSignUpPage />
                     )} />
                 </Switch>
-                <footer>
-                    <p>&copy; 2022 by <a href="https://oscarluna.dev ">Oscar Armando Luna</a></p>
-                </footer>
+               <Footer />
             </Elements>
         </div>
     );
