@@ -13,7 +13,7 @@ import {
 
 const CartIcon = ({ toggleCartHidden, itemCount }) => (
   <CartContainer onClick={toggleCartHidden}>
-    <ShoppingIcon />
+    <i className="fa-solid fa-basket-shopping fa-2xl" style={{color: "rgb(123, 24, 56)", textShadow: "0px 1.5px 2px rgba(0,0,0,0.11)", padding: "5px"}}></i>
     <ItemCountContainer>{itemCount}</ItemCountContainer>
   </CartContainer>
 );
