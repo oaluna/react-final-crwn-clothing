@@ -43,7 +43,7 @@ const ProductCard = ({ product, onClick }) => {
             <img src={imgUrl} />
             <Tag>New</Tag>
             <PriceTag>
-              <span>${price}</span>
+              <span>${price.toFixed(2)}</span>
             </PriceTag>
           </ImageContainer>
   

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { PhilosophyContainer } from './philosophy.styles';
 
@@ -77,3 +78,6 @@ export default function Philosophy() {
     </PhilosophyContainer>
   );
 } 
+=======
+jk
+>>>>>>> parent of 59aac84 (Fixed problem with product cards, about me section)

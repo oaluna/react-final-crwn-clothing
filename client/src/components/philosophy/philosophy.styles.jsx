@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import styled from 'styled-components';
 
 /* Page Frame */
@@ -67,3 +68,5 @@ export const PhilosophyImg = styled.img`
     width: 100%;
     height: auto;
 `;
+=======
+>>>>>>> parent of 59aac84 (Fixed problem with product cards, about me section)
