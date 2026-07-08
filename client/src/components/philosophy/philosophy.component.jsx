@@ -1,20 +1,18 @@
-<<<<<<< HEAD
 import React from 'react';
-import { PhilosophyContainer } from './philosophy.styles';
+import { PhilosophyContainer, PhilosophyText, PhilosophyLeft, PhilosophyImg } from './philosophy.styles';
 
 export default function Philosophy() {
   return (
     <PhilosophyContainer>
    
-      <main 
-      style={{flexGrow: 1, border: "1px solid #d9d0c2", borderRadius: 16, overflow: "hidden", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", display: "grid", gridTemplateColumns: "repeat(2fr, 1fr)", gridGap: 2}}>
+      <main style={{background: "var(--bg-light)", borderRadius: "15px"}}>
         
-        <div 
-          style={{ width: "50%", padding:"16px", display: "flex", flexDirection: "column", justifyContent: "space-between", borderBottom: "1px solid #d9d0c2" }}>
+        <PhilosophyLeft
+          >
           
-          <div>
+          <PhilosophyText>
             <h1 
-            style={{fontSize: "36px", color: "#803858", marginBottom: "8px", fontWeight: "700", textAlign: "center", letterSpacing: "2px", fontStyle: "normal"}}>
+            style={{fontSize: "36px", color: "#803858", marginBottom: "8px", fontWeight: "700", textAlign: "center", letterSpacing: "0px", fontStyle: "normal"}}>
               My Vision
             </h1>
 
@@ -32,8 +30,7 @@ export default function Philosophy() {
                 </svg>
               </div>
 
-              <p 
-              style={{ fontSize: "18px", lineHeight: 1.2, color: "#4a4a4a", textAlign: "justify", fontStyle: "normal", fontWeight: 400}}>
+              <p style={{padding: "20px 8px"}}>
                 I design the way an artist paints across a canvas, intuitively, fearlessly, and with deep respect for 
                 texture, shape, color and space. Inspired by the energy of Balinese culture and San Francisco's 
                 weather, my work is warm, architectural, diverse, tropical, and fueled by raw creativity. My floral 
@@ -46,12 +43,10 @@ export default function Philosophy() {
                 design.
               </p>
             </div>
-          </div>
+          </PhilosophyText>
 
-          <div 
-          style={{marginTop: "12px", paddingTop: "6px", display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "space-between", gap: "6px"}}
-          className="mt-12 pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-            <button className="bg-[#803858] text-white px-8 py-3.5 text-xs tracking-widest uppercase font-semibold hover:bg-[#6a2d48] transition-all duration-300 shadow-sm">
+          <div>
+            <button style={{background: "#803858", color: "white", background: "var(--bg-light)"}}>
               Explore My Work
             </button>
             
@@ -60,16 +55,16 @@ export default function Philosophy() {
             </div>
           </div>
 
-        </div>
+        </PhilosophyLeft>
 
-        <div className="lg:col-span-5 bg-[#eae5d9] relative min-h-[400px] lg:min-h-full flex items-center justify-center overflow-hidden">
+        <PhilosophyImg className="lg:col-span-5 bg-[#eae5d9] relative min-h-[400px] lg:min-h-full flex items-center justify-center overflow-hidden">
           <img 
           style={{position: "absolute", right: "12vw", top: "72vh", maxWidth: "40%", height: "auto", objectFit: "contain", display: "flex"}}
             src="https://ik.imagekit.io/glowingflowers/the-art-of-bouquet?updatedAt=1779831132473" 
             alt="Sculptural floral arrangement on a concrete pedestal" 
             className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700 ease-out"
           />
-        </div>
+        </PhilosophyImg>
 
       </main>
 
@@ -78,6 +73,3 @@ export default function Philosophy() {
     </PhilosophyContainer>
   );
 } 
-=======
-jk
->>>>>>> parent of 59aac84 (Fixed problem with product cards, about me section)

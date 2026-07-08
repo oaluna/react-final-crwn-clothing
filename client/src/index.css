@@ -1,13 +1,5 @@
-html,
-body {
-  width: 100%;
-  margin: 0;
-  font-family: 'Nunito', sans-serif;
-  position: relative;
-  z-index: 0;
-}
+@import "tailwindcss";
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@tailwindcss body;
+@tailwindcss container;
+@tailwindcss utilities;

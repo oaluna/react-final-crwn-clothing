@@ -6,6 +6,9 @@ export const HomePageContainer = styled.div`
   align-items: flex-start;
   width: 100%;
   box-sizing: border-box;
+  @media (max-width: 768px) {
+  margin-left: 0vw;
+  }
 `;
 
 export const HomeProductGrid = styled.div`
@@ -15,4 +18,10 @@ export const HomeProductGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 24px;
   margin: 24px 8vw;
+  @media (max-width: 768px) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 24px 0vw;
+  }
 `;

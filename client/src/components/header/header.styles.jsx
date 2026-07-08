@@ -7,6 +7,9 @@ export const HeaderContainer = styled.nav`
   padding: 0 8vw;
   margin: 0 auto;
   display: flex;
+  flex-direction: row;
+  poisition: relative;
+
   align-items: center;
   justify-content: space-between;
   background-color: var(--bg-dark);
@@ -35,34 +38,33 @@ export const HeaderTitle = styled.h2`
 `;
 
 export const LogoContainer = styled.span`
-  display: flex;
-    width: 64px;
-    height: 64px;
-  align-items: center;
-  gap: 2vw;
+
   padding: 1vh 1vw;
   @media (max-width: 540px) {
-  width: 96px;
-  height: 96px;
-
+    width: 64px;
+    height: auto;
     margin: 10px auto;
-    gap: 1vw;
+
   }
 `;
 
 export const OptionsContainer = styled.ul`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;/* Aligns to the right for tablet & desktop */
   list-style: none;
-  padding: 0;
   margin: 0;
-  justify-content: flex-end;
+  padding: 0;
+  height: 15%;
+  width: 100%;
+  gap: 15px; /* Adds space between option links and the cart icon */
 
   @media screen and (max-width: 540px) {
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin: 10px 15px;
- 
+    width: 100%;
+    justify-content: center; /* Centers the row on mobile screens */
+    flex-wrap: nowrap; /* Forces elements to stay in a single row */
+    gap: 5px; /* Tighter spacing for smaller screens */
   }
 `;
 
@@ -71,7 +73,8 @@ export const OptionLink = styled(Link)`
   cursor: pointer;
   text-decoration: none;
   list-style: none;
-  
+  position: relative;
+
   font-weight: bold;
   color: var(--text-light);
   &:hover {
@@ -79,11 +82,7 @@ export const OptionLink = styled(Link)`
   }
 
   @media (max-width: 540px) {
-  li{
-text-decoration: none;
-color: #333;
     font-size: 12px;
     padding: 10px 5px;
-}
   }
 `;

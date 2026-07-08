@@ -16,21 +16,27 @@ export const CardWrapper = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  height: 300px;
+
   width: 100%;
   background-position: center;
-padding: 20px;
+padding: -10vh 20px 30vh 20px;
   background-repeat: no-repeat;
   background-size: cover;
   position:relative;
+  margin-top: 0vh;
+  img {
   z-index: 0;
+    height: 300px;
+    width: 100%;
+    object-fit: contain;
+}
 `;
 
 export const Tag = styled.div`
   position: absolute;
   top: 15px;
   left: 15px;
-  background: var(--color-primary);
+  background: var(--bg-dark);
   color: var(--text-light);
   padding: 5px 10px;
   font-size: 11px;
@@ -44,7 +50,7 @@ export const PriceTag = styled.div`
   position: absolute;
   bottom: -20px;
   right: 20px;
-  background: var(--bg-light);
+  background: var(--bg-dark);
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -53,7 +59,7 @@ export const PriceTag = styled.div`
   align-items: center;
   font-size: 18px;
   font-weight: 700;
-  color: var(--color-primary);
+  color: white;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   z-index: 10;
   
@@ -73,7 +79,7 @@ export const Title = styled.h2`
   font-size: 22px;
   font-weight: 700;
   color: var(--color-primary);
-  z-index: 10;
+  z-index: 222;
 `;
 
 export const Subtitle = styled.p`

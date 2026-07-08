@@ -1,3 +1,94 @@
+/* ==========================================================================
+   1. GLOBAL RESET & BOX-SIZING
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+     2. ROOT & VIEWPORT SETUP
+     ========================================================================== */
+html {
+  /* Prevents font size adjustments after orientation changes in iOS */
+  -webkit-text-size-adjust: 100%;
+  /* Sets base font size for rem calculations */
+  font-size: 16px;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: var(--bg-dark, #121212);
+  color: var(--text-light, #ffffff);
+  line-height: 1.5;
+
+  /* CRITICAL: Prevents unwanted horizontal scrolling on mobile screens */
+  overflow-x: none;
+  width: 100%;
+
+  /* Ensures the body takes up at least the full viewport height */
+  min-height: 100vh;
+  /* Modern browsers: uses dynamic viewport height to account for mobile URL bars */
+  min-height: 100dvh;
+
+}
+
+#root,
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  overflow-x: hidden;
+  
+}
+
+/* ==========================================================================
+     3. RESPONSIVE MEDIA DEFAULTS
+     ========================================================================== */
+/* Ensures images and videos never overflow their parent containers */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ==========================================================================
+     4. ACCESSIBILITY & TOUCH TARGETS (MOBILE)
+     ========================================================================== */
+h1, h2, h3, h4, h5, h6, label, button,
+a,
+input,
+select,
+textarea {  
+  font-family: "Melodrama", serif;
+}
+
+p {
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+}
+/* Ensures clickable elements are large enough for thumb taps on touchscreens */
+
+@media screen and (max-width: 540px) {
+
+  button,
+  a[role="button"],
+  input[type="submit"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* ==========================================================================
+     5. GLOBAL CSS VARIABLES
+     ========================================================================== */
 
 
 :root {
@@ -16,7 +107,7 @@
   --text-dark: #000908;
   --text-light: #ffffff;
   --font-body: 'Nunito', sans-serif;
-  --font-header:  'Melodrama', serif;
+  --font-header: 'Melodrama', serif;
 }
 
 #gradient {
@@ -30,112 +121,4 @@
   -webkit-text-fill-color: transparent;
   font-size: 20vw;
   z-index: 20;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
-body {
-  min-height: 100vh;
-  background: var(--bg-color);
-  color: var(--text-color);
-  overflow-x: hidden;
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-button,
-input,
-textarea,
-select {
-  font: inherit;
-}
-
-#__root {
-  min-height: 100vh;
-}
-
-.container {
-  width: min(100%, var(--max-width));
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--page-padding);
-  padding-right: var(--page-padding);
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-
-.col {
-  flex: 1 1 0;
-  min-width: 0;
-}
-
-.section {
-  background: var(--surface-color);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-  padding: 24px;
-}
-
-footer {
-  text-align: center;
-  margin: 3em auto 0 auto;
-  padding: 0;
-}
-
-@media (max-width: 900px) {
-  html {
-    font-size: 15px;
-  }
-
-  .row {
-    gap: 18px;
-  }
-}
-
-@media (max-width: 600px) {
-  html {
-    font-size: 14px;
-  }
-
-  .container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  .row {
-    flex-direction: column;
-  }
-}
-
-h1, h2, h3, h4, h5, a {
-  font-family: var(--font-header);
-  font-style: normal;
-  font-weight: 500;
-}
-
-p, small, h6 {
-  font-family: var(--font-body);
-  font-style: normal;
-  font-weight: 400;
 }
