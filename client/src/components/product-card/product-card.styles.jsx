@@ -3,7 +3,9 @@ import styled from 'styled-components';
 export const CardWrapper = styled.div`
   width: 300px;
   height: 400px;
-  background: var(--bg-light);
+  background: var(--color-primary);
+  color: var(--text-dark);
+  
   border-radius: 5px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   overflow: hidden;
@@ -36,8 +38,8 @@ export const Tag = styled.div`
   position: absolute;
   top: 15px;
   left: 15px;
-  background: var(--bg-dark);
-  color: var(--text-light);
+  background: var(--color-highlight);
+  color: var(--text-dark);
   padding: 5px 10px;
   font-size: 11px;
   font-weight: 700;
@@ -78,7 +80,7 @@ export const Title = styled.h2`
   margin: 0 0 10px;
   font-size: 22px;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--text-dark);
   z-index: 222;
 `;
 
@@ -103,7 +105,7 @@ export const ColorDot = styled.button`
   cursor: pointer;
   padding: 0;
   outline: none;
-  box-shadow: inset 0 0 0 2px var(--bg-light);
+  box-shadow: inset 0 0 0 2px var(--color-primary);
   transition: border-color 0.2s ease;
 
   &:hover {
@@ -141,7 +143,7 @@ export const ButtonRow = styled.div`
 
 export const ActionButton = styled.button`
   flex: ${props => props.primary ? '2' : '1'};
-  background: ${props => props.primary ? 'var(--color-accent)' : 'var(--bg-light)'};
+  background: ${props => props.primary ? 'var(--color-accent)' : '#c7ac92'};
   color: ${props => props.primary ? 'var(--text-light)' : 'var(--text-dark)'};
   border: none;
   padding: 15px 0;

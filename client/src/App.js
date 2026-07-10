@@ -12,7 +12,7 @@ import ProductPage from './pages/product/product.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import CheckoutPage from './pages/checkout/checkout.component';
 import ContactPage from './pages/contact/contact.component';
-import Header from './components/header/header.component';
+import HeaderComponent from './components/header/header.component';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
 
@@ -26,7 +26,7 @@ const App = ({ checkUserSession, currentUser }) => {
     return (
         <div>
             <Elements stripe={stripePromise}>
-                <Header />
+                <HeaderComponent />
                 <Switch>
                     <Route exact path='/' component={HomePage} />
                     <Route exact path=' /shop' component={ShopPage} />           <Route path='/shop/:productId' component={ProductPage} />

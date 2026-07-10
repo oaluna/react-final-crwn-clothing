@@ -4,15 +4,11 @@ export const PhilosophyContainer = styled.div`
    min-height: 100%;
    color: #333;
    padding: 16vh 8vw;
-
-   
    justify-content: space-around;
    max-width: 1200px;
    margin: 0 auto;
-   
    @media (max-width: 767px) {
    padding: 20px 8px;
-
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -27,11 +23,13 @@ export const PhilosophyContainer = styled.div`
 export const PhilosophyText = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  gap: 30px;
-         background-color: var(--bg-light);
-  align-items: start;
+  gap: 20px;
+
+
   .text-section {
     width: 100%;
+      font-size: 16px;
+  line-height: 1.5;
   }
 
   @media (min-width: 768px) {
@@ -49,39 +47,48 @@ export const PhilosophyText = styled.div`
     position: relative;
 margin: 0px 8px;
     flex-wrap: no-wrap;
-      width: 100vw;
+      text-align: left;
     
   }
 `;
 
 export const PhilosophyLeft = styled.div`
   font-family: 'Melodrama', serif;
-  color: #904868;
+  color: #a44a3f;
   font-size: 32px;
   margin-bottom: 20px;
-      background: var(--bg-light);
-
+  margin-right: 30vw;
+      background:var(--color-primary);
+      padding: 20px 12px;
+      border-radius: 15px;
+      box-shadow: 0px 1.5px 5px rgba(0,0,0,0.3)
+    max-width: 1200px;
+position: relative;
   .vision-body {
     font-family: 'Nunito', serif;
     color: #333333;
-    line-height: 1;
-    font-size: 12px;
+    line-height: 1.2;
+    font-size: 16px;
+text-align: left;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
 
   }
 
   .icon-pair {
     margin-top: 20px;
-    color: #904868;
+    color: #a44a3f;
   }
 
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     font-size: 42px;
     margin-bottom: 30px;
     .icon-pair {
       margin-top: 30px;
     }
   }
-    @media (min-width: 350px) {
+    @media (max-width: 350px) {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -93,9 +100,11 @@ export const PhilosophyLeft = styled.div`
 `;
 
 export const PhilosophyImg = styled.div`
+background: var(--color-highlight);
 img {
     display: block;
     width: 100%;
     height: auto;
+  
 }
 `;

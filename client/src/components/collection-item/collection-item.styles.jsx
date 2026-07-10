@@ -9,7 +9,7 @@ export const CollectionItemContainer = styled.div`
   align-items: center;
   position: relative;
   color: var(--text-dark);
-  background-color: var(--bg-light);
+  background-color: #c7ac92;
   box-shadow: 0px 1.5px 4px rgba(0, 0, 0, 0.3);
   margin: 15px;
   padding: 15px;

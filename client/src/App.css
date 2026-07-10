@@ -94,18 +94,15 @@ p {
 :root {
   --max-width: 1200px;
   --page-padding: 24px;
-  --bg-dark: #256f44;
-  --color-primary: #277436;
-  --color-secondary: #2e852b;
-  --color-accent: #4ea230;
-  --color-success: #7eca33;
-  --button-primary: #b8df50;
-  --button-secondary: #ebf072;
-  --bg-color: #fae89a;
-  --bg-light: #fee5c2;
-  --color-highlight: #ffece2;
-  --text-dark: #000908;
-  --text-light: #ffffff;
+  --bg-dark: #d4ac79;
+  --bg-light: #c97d7e;
+  --bg-muted: #9CA790;
+  --color-primary: #f8d2d3;
+  --color-secondary: #ffe5b4;
+  --color-highlight: #f19591;
+  --color-warning: #8A5A65;
+  --text-dark: #6f686d;
+  --text-light: #F9F4EE;
   --font-body: 'Nunito', sans-serif;
   --font-header: 'Melodrama', serif;
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { Link } from 'react-router-dom';
+import { Header } from "grommet";
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
 import { selectCartHidden } from '../../redux/cart/cart.selectors';
@@ -11,24 +12,19 @@ import Logo from '../../assets/logo.svg';
 import {
   HeaderContainer,
   LogoContainer,
+  LogoComponent,
   OptionsContainer,
   OptionLink
 } from './header.styles';
 
-// Updated to responsive sizing so it respects the 96px mobile width set in your CSS
-const LogoComponent = () => (
-  <img 
-    src={Logo} 
-    alt="glowing-flowers" 
-    style={{ position: "relative", width: "100%", height: "auto", maxWidth: "300px", maxHeight: "250px" }} 
-  />
-);
 
-const Header = ({ currentUser, hidden, signOutStart }) => (
-  <HeaderContainer>
+
+const HeaderComponent = ({ currentUser, hidden, signOutStart }) => (
+   <Header fill="horizontal" width={{max: "xLarge"}}>
     <Link to='/'>
       <LogoContainer>
-        <LogoComponent />
+        <LogoComponent   src={Logo} 
+    alt="glowing-flowers" />
       </LogoContainer>
     </Link>
     <OptionsContainer>
@@ -44,7 +40,7 @@ const Header = ({ currentUser, hidden, signOutStart }) => (
       <CartIcon />
     </OptionsContainer>
     {hidden ? null : <CartDropdown />}
-  </HeaderContainer>
+  </Header>
 );
 
 const mapStateToProps = createStructuredSelector({
@@ -56,4 +52,4 @@ const mapDispatchToProps = (dispatch) => ({
   signOutStart: () => dispatch(signOutStart())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(HeaderComponent);

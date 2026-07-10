@@ -8,6 +8,9 @@ export const ProductPageContainer = styled.div`
   padding: 40px 20px;
   box-sizing: border-box;
   display: flex;
+  background: linear-gradient(to left, rgba(255,255,255,0.11) 0%, rgba(255,255,255,0.25) 50%, rgba(255,255,255,0.06) 100%);
+ box-shadow: 4px 2.5px 6px rgba(0, 0, 0, 0.22);
+ border: 1px solid linear-gradient(to-right, rgba(255,255,255,0.33), rgba(255,255,255,0.16));
   flex-direction: column;
   gap: 32px;
 `;
@@ -32,8 +35,10 @@ width: 40%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
   overflow: visible;
   position: absolute;
+  top: 0vh;
   right: 8vw;
 `;
 
@@ -48,16 +53,17 @@ export const ProductTitle = styled.h1`
   margin: 0;
   font-size: 2.4rem;
   letter-spacing: -0.03em;
+  color: var(--text-light);
 `;
 
 export const ProductDescription = styled.p`
   font-size: 1rem;
   line-height: 1.8;
-  color: var(--text-dark);
+  color: var(--text-light);
 `;
 
 export const ProductPrice = styled.span`
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
 `;
 
@@ -72,7 +78,7 @@ export const ProductCategory = styled.span`
   display: inline-flex;
   padding: 10px 14px;
   border-radius: 999px;
-  background: var(--bg-medium);
+  background: var(--color-primary);
   color: var(--text-dark);
   font-size: 0.9rem;
 `;
@@ -88,8 +94,8 @@ export const ButtonRow = styled.div`
 
 export const ActionButton = styled.button`
   flex: ${props => props.primary ? '2' : '1'};
-  background: ${props => props.primary ? "var(--color-primary)": "var(--button-primary)"};
-  color: ${props => props.primary ? 'var(--text-light)' : 'var(--text-medium)'};
+  background: ${props => props.primary ? "var(--color-primary)": "var(--color-secondary)"};
+  color: ${props => props.primary ? 'var(--text-light)' : 'var(--text-dark)'};
   border: none;
   border-radius: 5px;
 
@@ -106,8 +112,8 @@ export const ActionButton = styled.button`
   align-items: center;
 
   &:hover {
-    background: ${props => props.primary ? 'var(--color-accent)' : 'var(--bg-light)'};
-    color: ${props => props.primary ? 'var(--text-light)' : 'var(--color-accent)'};
+    background: ${props => props.primary ? 'var(--color-highlight)' : 'bg-dark'};
+    color: ${props => props.primary ? 'var(--text-light)' : 'var(--color-highlight)'};
   }
   
   &:last-child {

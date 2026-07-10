@@ -19,6 +19,11 @@ export const StyledHero = styled.div`
     height: 100vh;
   }
 `;
+const RainbowAnimation = keyframes`
+   0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+`
 
 const FadeInAnimation = keyframes`
   0% {
@@ -44,39 +49,36 @@ export const HeroMask = styled.span`
 `;
 
 export const HeaderHeroImg = styled.img`
-  object-position: center;
- object-fit: cover;
-position: absolute;
-  @media (max-width: 800px) {
-    width: 100vw;
-    position: relative;
-    height: 100vh;
-    z-index: 10;
-  object-fit: cover;
-  object-position: center;
-  margin-top: -55vh;
-
-  }
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 `;
 
 export const HeroText = styled.h1`
- 
+font-size: 280px;
+  position: absolute;
+  top: 0;
+  left: 4vw;
   color: white;
-  font-size: 68px;
-  top: 20vh;
+  margin-top: 28vh;
   overflow: hidden;
   max-width: 100%;
-  padding: 0vh 8vw;
   text-align: left;
   z-index: 51;
-  animation: ${FadeInAnimation} 0.3s ease-in;
-
+  animation: ${FadeInAnimation} 1.3s ease-in;
+line-height: 0.8;
+letter-spacing: 0px;
+transform: skewX(1.5deg) scaleY(1.3);
+text-transform: uppercase;
   .rainbow {
-    background: linear-gradient(90deg, #ff0051, #ff7300, #ffeb00, #2cff65, #00d6ff, #6b5bff, #ff00b3);
+       background:linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+
+  animation: ${RainbowAnimation} 8s ease-in-out infinite;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
+    background-size: 400% 400%;
   }
 
   @media (max-width: 540px) {
@@ -89,42 +91,17 @@ line-height: 1.2;
     z-index: 0;
     animation: none;
     margin-top: -100vh;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1200px;
+    max-width: auto;
   }
 `;
 
-export const HeroDescription = styled.p`
-  font-size: 14px;
-  position: relative;
-  top: 55%;
-  width: 100vw;
-  text-align: center;
-  line-height: 2;
-  z-index: 21;
-  color: white;
-  margin: 0;
-  padding-right: 2.2rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-
-
-  @media (max-width: 540px) {
-    font-size: 12px;
-    color: white;
-    text-align: center;
-
-    position: absolute;
-    z-index: 31;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+export const HeroDescription = styled.span`
     width: 100%;
-    height: 5%;
-  top: -44vh;
-  }
+height: auto;
+
+background: #a44a3f;
+position: absolute;
+top: 0vh;
+opacity: 1;
+z-index: 100;
 `;
