@@ -14,7 +14,7 @@ export const MenuItemContainer = styled.div`
   padding: 15px;
   overflow: hidden;
   box-shadow: 0px 2px 3.8px rgba(0, 0, 0, 0.23);
-  background: var(--color-primary); /* fallback for old browsers */
+  background: white; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     183deg,
     rgba(118, 50, 89, 0.11) 15%,
@@ -93,7 +93,7 @@ export const ContentContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--text-dark);
+  border: 1px solid black;
   opacity: 0.7;
   position: absolute;
   &:hover {
@@ -114,7 +114,7 @@ export const ContentTitle = styled.span`
   margin-bottom: 6px;
   text-shadow: 1px 0px 10px var(--bg-dark);
   font-size: 22px;
-  color: var(--text-light);
+  color: white;
 
 `;
 
@@ -122,6 +122,6 @@ export const ContentSubtitle = styled.span`
   font-weight: lighter;
   text-shadow: 1px 0px 10px var(--bg-dark);
   font-size: 16px;
-  color: var(--text-light);
+  color: white;
 
 `;

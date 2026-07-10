@@ -8,7 +8,7 @@ export const CollectionItemContainer = styled.div`
   height: 600px;
   align-items: center;
   position: relative;
-  color: var(--text-dark);
+  color: black;
   background-color: #c7ac92;
   box-shadow: 0px 1.5px 4px rgba(0, 0, 0, 0.3);
   margin: 15px;
@@ -74,9 +74,9 @@ export const AddButton = styled(CustomButton)`
   opacity: 0.7;
   position: absolute;
   top: 100%;
-  color: var(--text-light);
+  color: white;
   border: none;
-  background: var(--color-primary-variant);
+background; gray;
   @media screen and (max-width: 800px) {
     display: block;
     opacity: 0.9;
@@ -121,7 +121,7 @@ export const PriceContainer = styled.span`
   text-align: right;
   float: right;
   font-weight: 700;
-  color: var(--color-accent);
+  color: white;
 `;
 
 export const DescriptionContainer = styled.span`
@@ -130,7 +130,7 @@ export const DescriptionContainer = styled.span`
   font-weight: 500;
   line-height: 1.3;
   position: absolute;
-  color: var(--text-dark);
+  color:black;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;

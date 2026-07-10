@@ -9,8 +9,7 @@ export const HeaderContainer = styled.nav`
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	background-color: var(--bg-dark);
-	color: var(--text-light);
+	background-color: grey;
 
 	@media screen and (max-width: 800px) {
 		padding: 0 4vw;
@@ -30,7 +29,7 @@ export const HeaderTitle = styled.h2`
 	padding: 0;
 	margin: 0;
 	&:hover {
-		color: var(--color-accent);
+		color: grey;
 	}
 `;
 
@@ -77,9 +76,9 @@ export const OptionLink = styled(Link)`
 	position: relative;
 
 	font-weight: bold;
-	color: var(--text-light);
+	color: blue;
 	&:hover {
-		color: var(--color-accent);
+		color: grey;
 	}
 
 	@media (max-width: 540px) {

@@ -18,9 +18,9 @@ html {
 }
 
 body {
-  font-family: "Nunito", sans-serif;
-  background-color: var(--bg-dark, #121212);
-  color: var(--text-light, #ffffff);
+  font-family: "Arial", sans-serif;
+  background-color: white;
+  color: black;
   line-height: 1.5;
 
   /* CRITICAL: Prevents unwanted horizontal scrolling on mobile screens */
@@ -67,11 +67,11 @@ a,
 input,
 select,
 textarea {  
-  font-family: "Melodrama", serif;
+  font-family: "Roboto", serif;
 }
 
 p {
-  font-family: "Nunito", sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 12px;
 }
 /* Ensures clickable elements are large enough for thumb taps on touchscreens */
@@ -103,8 +103,8 @@ p {
   --color-warning: #8A5A65;
   --text-dark: #6f686d;
   --text-light: #F9F4EE;
-  --font-body: 'Nunito', sans-serif;
-  --font-header: 'Melodrama', serif;
+  --font-body: 'Arial', sans-serif;
+  --font-header: 'Roboto', serif;
 }
 
 #gradient {

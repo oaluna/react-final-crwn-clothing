@@ -18,11 +18,11 @@ export const ShoppingIcon = styled(ShoppingIconSVG)`
   height: 24px;
   background: none;
   align-items: center;
-  fill: var(--text-light);
+  fill: grey;
 
 transform: scale(0.3);
   &:hover {
-    fill: var(--color-accent);
+    fill: grey;
   }
 
 @media (max-width: 540px) {
@@ -39,7 +39,7 @@ export const ItemCountContainer = styled.span`
   font-size: 10px;
   font-weight: bold;
   bottom: 12px;
-  color: var(--text-dark);
+  color: black;
   background: #fff;
   width: 18px;
   height: 18px;

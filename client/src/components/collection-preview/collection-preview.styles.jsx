@@ -59,18 +59,18 @@ export const TitleContainer = styled.h1`
   padding: 5px 5em;
   box-sizing: border-box;
   cursor: pointer;
-  font-family: 'Melodrama', serif;
+  font-family: 'Roboto', serif;
 height: 2px;
   background: linear-gradient(
     245deg,
-    var(--color-primary) 5%,
+    black 5%,
     rgba(136, 110, 107, 0) 95%
   );
   display:flex;
   flex-direction: row;align-items: flex-end;
-color: var(--text-dark);
+color: black;
   &:hover {
-      color:  var(--color-primary-variant);
+      color:  black;
   }
   @media (max-width: 800px) {
     flex-direction:column;

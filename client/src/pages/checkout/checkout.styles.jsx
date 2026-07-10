@@ -19,7 +19,7 @@ export const CheckoutHeaderContainer = styled.div`
   height: 40px;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid var(--text-dark);
+  border-bottom: 1px solid black;
 `;
 
 export const HeaderBlockContainer = styled.div`
@@ -41,5 +41,5 @@ export const WarningContainer = styled.div`
   text-align: center;
   margin-top: 40px;
   font-size: 24px;
-  color: var(--color-accent);
+  color: grey;
 `;

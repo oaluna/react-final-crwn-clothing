@@ -6,8 +6,8 @@ export const CheckoutItemContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   min-height: 100px;
-  border-bottom: 1px solid var(--text-dark);
-  color: var(--text-dark);
+  border-bottom: 1px solid black;
+  color: black;
 
   padding: 15px 0px;
   font-size: 20px;
@@ -15,7 +15,7 @@ export const CheckoutItemContainer = styled.div`
   & .removeLabel {
     opacity: 0;
     & :hover {
-      color: var(--color-accent);
+      color: grey;
       font-size: 8px;
       opacity: 1;
       z-index: 1;
@@ -54,9 +54,9 @@ export const RemoveButtonContainer = styled.div`
 margin-right: 5%;
   padding: 0 4px;
   cursor: pointer;
-  color: var(--text-light);
+  color: white;
   text-align: right;
-  background: var(--color-accent);
+  background: gray; 
   border-radius: 50%;
   font-size: 12px;
 box-shadow: 0px 1.5px 3px rgba(0,0,0,.3);

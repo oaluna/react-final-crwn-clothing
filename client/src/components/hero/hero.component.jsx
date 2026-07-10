@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <StyledHero>
        <HeroDescription>
-        <p>
+        <p style={{color: "white"}}>
 This is more than floral design. It's "LIVING ART".
 </p>
       </HeroDescription>
@@ -18,8 +18,8 @@ This is more than floral design. It's "LIVING ART".
       />
       </HeroMask>
 
-      <HeroText><em>The <span className="rainbow">Artistry</span> of Blooms</em></HeroText>
-     
+      <HeroText> The Artistry of Blooms</HeroText>
+     <a href="#shop"><button style={{position: 'absolute', top: "40vh",left: "20vw",color:"white", background: "pink", zIndex: 100 }}>Shop Now</button></a>
       </Parallax>
     </StyledHero>
   );

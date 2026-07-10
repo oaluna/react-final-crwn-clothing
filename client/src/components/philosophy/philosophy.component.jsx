@@ -5,15 +5,14 @@ export default function Philosophy() {
   return (
     <PhilosophyContainer>
    
-      <main style={{background: "#c7ac92", borderRadius: "15px"}}>
-        
+      <main style={{borderRadius: "15px"}}>
+      <h1 style={{position: "relative", textAlign: "center"}}>
+              My Vision
+            </h1>
         <PhilosophyLeft
           >
           
-            <h1 
-            style={{fontSize: "36px", color: "#803858", marginBottom: "8px", fontWeight: "700", textAlign: "center", letterSpacing: "0px", fontStyle: "normal"}}>
-              My Vision
-            </h1>
+           
 
             <div className="vision-body">
               
@@ -36,7 +35,7 @@ export default function Philosophy() {
 
           <div style={{display: "flex", flexDirection:"row", alignItems: "center", justifyContent: "flex-end"}}>
             <a href="/shop">
-            <button style={{background: "#7b1838", color: "white", padding: "15px 25px"}}>
+            <button style={{ color: "black", padding: "15px 25px"}}>
               Explore My Work
             </button>
             </a>

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 
-import { ContactFormContainer, ContactFormTitle } from './contact-form.styles';
+import { ContactFormContainer, StyledContactForm,  ContactFormTitle } from './contact-form.styles';
 
 const ContactForm = () => {
   const [messageContent, setMessageContent] = useState({
@@ -24,9 +24,10 @@ const ContactForm = () => {
   return (
     <ContactFormContainer>
       <img
-        src="https://res.cloudinary.com/dgdnpkfun/image/upload/v1657057747/arrangements/massive-metropolitan_jyj0ht.png" style={{ display: 'flex', flexDirection: 'column', width: '35em', position: 'absolute', left: '8em', top: '5em'}}
+        src="https://res.cloudinary.com/dgdnpkfun/image/upload/v1657057747/arrangements/massive-metropolitan_jyj0ht.png"
         alt="massive metropolitan"
       />
+      <StyledContactForm>
       <ContactFormTitle>Contact Me</ContactFormTitle>
       <span>Planning an event? Get in touch</span>
       <form
@@ -58,8 +59,9 @@ const ContactForm = () => {
           required
         />
 
-        <CustomButton type="submit">Send Message</CustomButton>
+        <CustomButton type="submit" style={{background: "black", margin: "0 auto"}}>Send Message</CustomButton>
       </form>
+      </StyledContactForm>
     </ContactFormContainer>
   );
 };

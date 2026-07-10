@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 export const PhilosophyContainer = styled.div`
-   min-height: 100%;
+   height: 100%;
    color: #333;
    padding: 16vh 8vw;
-   justify-content: space-around;
+   justify-content: space-evenly;
+   align-items: center;
    max-width: 1200px;
    margin: 0 auto;
    @media (max-width: 767px) {
@@ -53,19 +54,21 @@ margin: 0px 8px;
 `;
 
 export const PhilosophyLeft = styled.div`
-  font-family: 'Melodrama', serif;
+  font-family: 'Roboto', serif;
   color: #a44a3f;
   font-size: 32px;
   margin-bottom: 20px;
   margin-right: 30vw;
-      background:var(--color-primary);
+      background: lightgrey;
       padding: 20px 12px;
       border-radius: 15px;
       box-shadow: 0px 1.5px 5px rgba(0,0,0,0.3)
     max-width: 1200px;
 position: relative;
+align-items: center;
+margin-top: -40vh;
   .vision-body {
-    font-family: 'Nunito', serif;
+    font-family: 'Arial', serif;
     color: #333333;
     line-height: 1.2;
     font-size: 16px;
@@ -100,7 +103,7 @@ align-items: flex-start;
 `;
 
 export const PhilosophyImg = styled.div`
-background: var(--color-highlight);
+background: gray;
 img {
     display: block;
     width: 100%;

@@ -20,16 +20,14 @@ export const ProductDetailGrid = styled.div`
   grid-template-columns: 1.2fr 1fr;
   gap: 32px;
   align-items: start;
-
   @media screen and (max-width: 820px) {
     grid-template-columns: 1fr;
   }
 `;
 
 export const ProductImage = styled.div`
- 
   max-width: 100%;
-width: 40%;
+  width: 40%;
   min-height: 100%;
   background-image: ${({ imageUrl }) => `url(${imageUrl})`};
   background-size: cover;
@@ -53,13 +51,13 @@ export const ProductTitle = styled.h1`
   margin: 0;
   font-size: 2.4rem;
   letter-spacing: -0.03em;
-  color: var(--text-light);
+  color: black;
 `;
 
 export const ProductDescription = styled.p`
   font-size: 1rem;
   line-height: 1.8;
-  color: var(--text-light);
+  color: black;
 `;
 
 export const ProductPrice = styled.span`
@@ -78,8 +76,8 @@ export const ProductCategory = styled.span`
   display: inline-flex;
   padding: 10px 14px;
   border-radius: 999px;
-  background: var(--color-primary);
-  color: var(--text-dark);
+  background: white;
+  color: black;
   font-size: 0.9rem;
 `;
 
@@ -94,8 +92,8 @@ export const ButtonRow = styled.div`
 
 export const ActionButton = styled.button`
   flex: ${props => props.primary ? '2' : '1'};
-  background: ${props => props.primary ? "var(--color-primary)": "var(--color-secondary)"};
-  color: ${props => props.primary ? 'var(--text-light)' : 'var(--text-dark)'};
+  background: ${props => props.primary ? "black": "grey"};
+  color: ${props => props.primary ? 'grey' : 'black'};
   border: none;
   border-radius: 5px;
 
@@ -113,7 +111,7 @@ export const ActionButton = styled.button`
 
   &:hover {
     background: ${props => props.primary ? 'var(--color-highlight)' : 'bg-dark'};
-    color: ${props => props.primary ? 'var(--text-light)' : 'var(--color-highlight)'};
+    color: ${props => props.primary ? 'grey' : 'var(--color-highlight)'};
   }
   
   &:last-child {

@@ -61,7 +61,7 @@ const HomePage = ({ match, ...props }) => {
         {loading ? (
           <p>Loading products...</p>
         ) : (
-          <HomeProductGrid>
+          <HomeProductGrid id="shop">
             {products.map((product) => (
               <ProductCard
                 key={product.id}
