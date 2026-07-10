@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { Link } from 'react-router-dom';
-import { Header } from "grommet";
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
 import { selectCartHidden } from '../../redux/cart/cart.selectors';
@@ -20,7 +19,7 @@ import {
 
 
 const HeaderComponent = ({ currentUser, hidden, signOutStart }) => (
-   <Header fill="horizontal" width={{max: "xLarge"}}>
+ <HeaderContainer>
     <Link to='/'>
       <LogoContainer>
         <LogoComponent   src={Logo} 
@@ -40,7 +39,7 @@ const HeaderComponent = ({ currentUser, hidden, signOutStart }) => (
       <CartIcon />
     </OptionsContainer>
     {hidden ? null : <CartDropdown />}
-  </Header>
+    </HeaderContainer>
 );
 
 const mapStateToProps = createStructuredSelector({
