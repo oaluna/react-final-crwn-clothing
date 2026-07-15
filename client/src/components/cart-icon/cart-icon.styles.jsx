@@ -47,8 +47,13 @@ export const ItemCountContainer = styled.span`
   font-size: 10px;
   font-weight: bold;
   bottom: 12px;
+<<<<<<< HEAD
   color: ${colors.black};
   background: ${colors.white};
+=======
+  color: black;
+  background: #fff;
+>>>>>>> refs/remotes/origin/master
   width: 18px;
   height: 18px;
   border-radius: 50%;

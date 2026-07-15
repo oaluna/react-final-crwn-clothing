@@ -7,8 +7,13 @@ export const CheckoutItemContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   min-height: 100px;
+<<<<<<< HEAD
   border-bottom: 1px solid ${colors.black};
   color: ${colors.black};
+=======
+  border-bottom: 1px solid black;
+  color: black;
+>>>>>>> refs/remotes/origin/master
 
   padding: 15px 0px;
   font-size: 20px;
@@ -16,7 +21,11 @@ export const CheckoutItemContainer = styled.div`
   & .removeLabel {
     opacity: 0;
     & :hover {
+<<<<<<< HEAD
       color: ${colors.gray};
+=======
+      color: grey;
+>>>>>>> refs/remotes/origin/master
       font-size: 8px;
       opacity: 1;
       z-index: 1;

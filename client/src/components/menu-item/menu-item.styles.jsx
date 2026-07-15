@@ -104,14 +104,22 @@ export const ContentContainer = styled.div`
 export const ContentTitle = styled.span`
   font-weight: bold;
   margin-bottom: 6px;
+<<<<<<< HEAD
   text-shadow: 1px 0px 10px ${colors.bgDark};
+=======
+  text-shadow: 1px 0px 10px var(--bg-dark);
+>>>>>>> refs/remotes/origin/master
   font-size: 22px;
   color: ${colors.white};
 `;
 
 export const ContentSubtitle = styled.span`
   font-weight: lighter;
+<<<<<<< HEAD
   text-shadow: 1px 0px 10px ${colors.bgDark};
+=======
+  text-shadow: 1px 0px 10px var(--bg-dark);
+>>>>>>> refs/remotes/origin/master
   font-size: 16px;
   color: ${colors.white};
 `;

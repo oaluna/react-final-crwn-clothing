@@ -58,7 +58,11 @@ const ContactForm = () => {
           required
         />
 
+<<<<<<< HEAD
         <SendMessageButton type="submit">Send Message</SendMessageButton>
+=======
+        <CustomButton type="submit" style={{background: "black", margin: "0 auto"}}>Send Message</CustomButton>
+>>>>>>> refs/remotes/origin/master
       </form>
       </StyledContactForm>
     </ContactFormContainer>

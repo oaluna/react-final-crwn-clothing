@@ -15,8 +15,13 @@ export const CartDropdownContainer = styled.div`
   top: 90px;
   right: 40px;
   z-index: 5;
+<<<<<<< HEAD
   color: ${colors.black};
   ${softShadow()}
+=======
+  color: black;
+  box-shadow: 0px 1.5px 5px rgba(0,0,0,0.3)
+>>>>>>> refs/remotes/origin/master
 `;
 
 export const CartDropdownButton = styled(CustomButton)`

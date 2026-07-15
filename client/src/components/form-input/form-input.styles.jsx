@@ -1,5 +1,11 @@
 import styled, { css } from 'styled-components';
+<<<<<<< HEAD
 import { colors } from '../../styles/theme';
+=======
+
+const subColor = 'black';
+const mainColor = 'black';
+>>>>>>> refs/remotes/origin/master
 
 const shrinkLabelStyles = css`
   top: -14px;

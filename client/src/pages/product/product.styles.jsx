@@ -8,9 +8,17 @@ export const ProductPageContainer = styled.div`
   margin: 0 auto;
   padding: 40px 20px;
   box-sizing: border-box;
+<<<<<<< HEAD
   ${flexColumn}
   background: linear-gradient(to left, rgba(255,255,255,0.11) 0%, rgba(255,255,255,0.25) 50%, rgba(255,255,255,0.06) 100%);
   box-shadow: 4px 2.5px 6px rgba(0, 0, 0, 0.22);
+=======
+  display: flex;
+  background: linear-gradient(to left, rgba(255,255,255,0.11) 0%, rgba(255,255,255,0.25) 50%, rgba(255,255,255,0.06) 100%);
+ box-shadow: 4px 2.5px 6px rgba(0, 0, 0, 0.22);
+ border: 1px solid linear-gradient(to-right, rgba(255,255,255,0.33), rgba(255,255,255,0.16));
+  flex-direction: column;
+>>>>>>> refs/remotes/origin/master
   gap: 32px;
 `;
 
@@ -19,8 +27,12 @@ export const ProductDetailGrid = styled.div`
   grid-template-columns: 1.2fr 1fr;
   gap: 32px;
   align-items: start;
+<<<<<<< HEAD
 
   ${media.tabletLarge`
+=======
+  @media screen and (max-width: 820px) {
+>>>>>>> refs/remotes/origin/master
     grid-template-columns: 1fr;
   `}
 `;
@@ -41,7 +53,12 @@ export const ProductImage = styled.div`
 `;
 
 export const ProductInfo = styled.div`
+<<<<<<< HEAD
   ${flexColumn}
+=======
+  display: flex;
+  flex-direction: column;
+>>>>>>> refs/remotes/origin/master
   height: 100%;
   gap: 30px;
 `;
@@ -50,13 +67,21 @@ export const ProductTitle = styled.h1`
   margin: 0;
   font-size: 2.4rem;
   letter-spacing: -0.03em;
+<<<<<<< HEAD
   color: ${colors.black};
+=======
+  color: black;
+>>>>>>> refs/remotes/origin/master
 `;
 
 export const ProductDescription = styled.p`
   font-size: 1rem;
   line-height: 1.8;
+<<<<<<< HEAD
   color: ${colors.black};
+=======
+  color: black;
+>>>>>>> refs/remotes/origin/master
 `;
 
 export const ProductPrice = styled.span`

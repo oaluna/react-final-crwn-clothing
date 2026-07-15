@@ -25,6 +25,7 @@ const BloomReveal = ({ children, className = '', delay = 0 }) => {
     }, []);
   
     return (
+<<<<<<< HEAD
       <RevealContainer
         ref={ref}
         className={className}
@@ -37,3 +38,18 @@ const BloomReveal = ({ children, className = '', delay = 0 }) => {
   };
   
   export default BloomReveal;
+=======
+      <div
+        ref={ref}
+        className={`transition-all duration-1000 ease-out ${className}`}
+        style={{
+          opacity: isVisible ? 1 : 0,
+          transform: isVisible ? 'translateY(0) scale(1)' : 'translateY(40px) scale(0.97)',
+          transitionDelay: `${delay}ms`,
+        }}
+      >
+        {children}
+      </div>
+    );
+  };
+>>>>>>> refs/remotes/origin/master

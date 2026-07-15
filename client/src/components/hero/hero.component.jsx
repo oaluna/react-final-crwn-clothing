@@ -1,6 +1,10 @@
 import React from 'react';
 import { Parallax } from 'react-scroll-parallax';
+<<<<<<< HEAD
 import { StyledHero, HeroMask, HeaderHeroImg, HeroText, HeroDescription, ShopNowButton } from './hero.styles';
+=======
+import { StyledHero, HeroMask, HeaderHeroImg, HeroText, HeroDescription } from './hero.styles';
+>>>>>>> refs/remotes/origin/master
 
 const Hero = () => {
   return (

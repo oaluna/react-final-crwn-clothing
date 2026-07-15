@@ -2,14 +2,24 @@ import styled, { css } from 'styled-components';
 import { colors, fonts } from '../../styles/theme';
 
 const buttonStyles = css`
+<<<<<<< HEAD
   background: linear-gradient(to right, ${colors.bgDark}, ${colors.bgLight});
   color: ${colors.black};
+=======
+  background: linear-gradient(to right, peach, mauve);
+  color: black;
+>>>>>>> refs/remotes/origin/master
   border: none;
   opacity: 1;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.21);
   &:hover {
+<<<<<<< HEAD
     background: linear-gradient(to right, ${colors.bgLight}, ${colors.bgLight});
     color: ${colors.black};
+=======
+    background: linear-gradient(to right, mauve, peach);
+    color: black;
+>>>>>>> refs/remotes/origin/master
   }
 `;
 

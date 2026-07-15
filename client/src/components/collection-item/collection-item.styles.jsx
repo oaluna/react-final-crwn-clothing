@@ -8,9 +8,15 @@ export const CollectionItemContainer = styled.div`
   height: 600px;
   align-items: center;
   position: relative;
+<<<<<<< HEAD
   color: ${colors.black};
   background-color: ${colors.tan};
   ${softShadow('4px')}
+=======
+  color: black;
+  background-color: #c7ac92;
+  box-shadow: 0px 1.5px 4px rgba(0, 0, 0, 0.3);
+>>>>>>> refs/remotes/origin/master
   margin: 15px;
   padding: 15px;
   cursor: pointer;
@@ -76,9 +82,14 @@ export const AddButton = styled(CustomButton)`
   top: 100%;
   color: ${colors.white};
   border: none;
+<<<<<<< HEAD
   background: ${colors.gray};
 
   ${media.tabletLarge`
+=======
+background; gray;
+  @media screen and (max-width: 800px) {
+>>>>>>> refs/remotes/origin/master
     display: block;
     opacity: 0.9;
     min-width: unset;
@@ -135,8 +146,13 @@ export const DescriptionContainer = styled.span`
   font-weight: 500;
   line-height: 1.3;
   position: absolute;
+<<<<<<< HEAD
   color: ${colors.black};
   ${flexColumn}
+=======
+  color:black;
+  flex-direction: column;
+>>>>>>> refs/remotes/origin/master
   align-items: flex-start;
   text-align: left;
   padding: 5px;

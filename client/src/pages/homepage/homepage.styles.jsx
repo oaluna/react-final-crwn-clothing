@@ -19,6 +19,7 @@ export const HomeProductGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 24px;
   margin: 24px 8vw;
+<<<<<<< HEAD
 
   ${media.tablet`
     ${flexColumn}
@@ -26,3 +27,12 @@ export const HomeProductGrid = styled.div`
     margin: 24px 0;
   `}
 `;
+=======
+  @media (max-width: 768px) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 24px 0vw;
+  }
+`;
+>>>>>>> refs/remotes/origin/master

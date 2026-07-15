@@ -70,7 +70,11 @@ export const TitleContainer = styled.h1`
   color: ${colors.black};
 
   &:hover {
+<<<<<<< HEAD
     color: ${colors.black};
+=======
+      color:  black;
+>>>>>>> refs/remotes/origin/master
   }
 
   ${media.tabletLarge`

@@ -24,7 +24,11 @@ body {
   line-height: 1.5;
 
   /* CRITICAL: Prevents unwanted horizontal scrolling on mobile screens */
+<<<<<<< HEAD
   overflow-x: hidden;
+=======
+  overflow-x: none;
+>>>>>>> refs/remotes/origin/master
   width: 100%;
 
   /* Ensures the body takes up at least the full viewport height */

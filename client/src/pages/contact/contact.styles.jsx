@@ -17,4 +17,8 @@ export const ContactContainer = styled.div`
     max-width: 50%;
     position: relative;
   }
+    img {
+    max-width: 50%;
+    position: relative;
+  }
 `;
