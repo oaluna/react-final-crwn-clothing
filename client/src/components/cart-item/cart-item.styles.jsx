@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '../../styles/theme';
 
 export const CartItemContainer = styled.div`
   width: 100%;
@@ -15,6 +16,10 @@ export const CartItemImage = styled.img`
   height: 100%;
 `;
 
+export const ItemName = styled.span`
+  width: 50%;
+`;
+
 export const ItemDetailsContainer = styled.div`
   width: 75%;
   display: flex;
@@ -22,7 +27,7 @@ export const ItemDetailsContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 10px  0 0 0;
-  color: white !important;
+  color: ${colors.black} !important;
 `;
 
 export const SubTotalContainer = styled.div`

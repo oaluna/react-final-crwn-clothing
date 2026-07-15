@@ -1,12 +1,10 @@
 import styled from 'styled-components';
+import { colors, flexColumnCenter } from '../../styles/theme';
 
 export const ErrorImageOverlay = styled.div`
   height: 60vh;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  ${flexColumnCenter}
 `;
 
 export const ErrorImageContainer = styled.div`
@@ -20,5 +18,5 @@ export const ErrorImageContainer = styled.div`
 
 export const ErrorImageText = styled.h2`
   font-size: 28px;
-  color: #2f8e89;
+  color: ${colors.teal};
 `;

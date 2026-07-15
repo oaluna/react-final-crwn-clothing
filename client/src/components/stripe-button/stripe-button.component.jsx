@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import axios from 'axios';
+import { media } from '../../styles/theme';
 
 const CARD_OPTIONS = {
   style: {
@@ -46,9 +47,9 @@ const FieldGroup = styled.div`
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
 
-  @media (max-width: 520px) {
+  ${media.down(520)`
     grid-template-columns: 1fr;
-  }
+  `}
 `;
 
 const Label = styled.label`
@@ -101,7 +102,7 @@ const ErrorMessage = styled.div`
 `;
 
 const StripeCheckoutButton = ({ price }) => {
-  const stripe = useStripe();
+  const stripe = useStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY || '');
   const elements = useElements();
   const [processing, setProcessing] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');

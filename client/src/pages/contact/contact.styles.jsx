@@ -1,13 +1,20 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import { media } from '../../styles/theme';
 
 export const ContactContainer = styled.div`
-  width: 900px;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  margin: 30px auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 
-  @media and (max-width: 900px) {
+  ${media.laptop`
     flex-direction: column;
     align-items: center;
+  `}
+
+  img {
+    max-width: 50%;
+    position: relative;
   }
 `;

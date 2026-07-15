@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import Hero from '../../components/hero/hero.component';
 import ProductCard from '../../components/product-card/product-card.component';
 import { database } from '../../firebase/firebase.utils';
+import Philosophy from "../../components/philosophy/philosophy.component";
 import { connect } from 'react-redux';
 import { HomePageContainer, HomeProductGrid } from './homepage.styles';
 import { fetchCollectionsStart } from '../../redux/shop/shop.actions';
@@ -62,6 +63,7 @@ const HomePage = ({ match, ...props }) => {
     return (
       <HomePageContainer>
         <Hero />
+        <Philosophy />
         {loading ? (
           <p>Loading products...</p>
         ) : (

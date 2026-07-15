@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors, softShadow } from '../../styles/theme';
 
 export const CheckoutItemContainer = styled.div`
   width: 100%;
@@ -6,7 +7,8 @@ export const CheckoutItemContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   min-height: 100px;
-  border-bottom: 1px solid darkgrey;
+  border-bottom: 1px solid ${colors.black};
+  color: ${colors.black};
 
   padding: 15px 0px;
   font-size: 20px;
@@ -14,7 +16,7 @@ export const CheckoutItemContainer = styled.div`
   & .removeLabel {
     opacity: 0;
     & :hover {
-      color: crimson;
+      color: ${colors.gray};
       font-size: 8px;
       opacity: 1;
       z-index: 1;
@@ -50,13 +52,13 @@ width: 20%;
 `;
 
 export const RemoveButtonContainer = styled.div`
-margin-right: 5%;
+  margin-right: 5%;
   padding: 0 4px;
   cursor: pointer;
-  color: white;
+  color: ${colors.white};
   text-align: right;
-  background: crimson;
+  background: ${colors.gray};
   border-radius: 50%;
   font-size: 12px;
-box-shadow: 0px 1.5px 3px rgba(0,0,0,.3);
+  ${softShadow('3px')}
 `;

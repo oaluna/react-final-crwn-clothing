@@ -1,44 +1,54 @@
-:root {
-  --max-width: 1200px;
-  --page-padding: 24px;
-  --bg-color: #f8f9fa;
-  --text-color: #222222;
-  --surface-color: #ffffff;
-  --border-color: #e6e8eb;
-}
-#gradient {
-  background: red;
-    background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet);
-    background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
-    background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
-    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 20vw;
-    z-index: 20;
-}
-
+/* ==========================================================================
+   1. GLOBAL RESET & BOX-SIZING
+   ========================================================================== */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* ==========================================================================
+     2. ROOT & VIEWPORT SETUP
+     ========================================================================== */
 html {
+  /* Prevents font size adjustments after orientation changes in iOS */
+  -webkit-text-size-adjust: 100%;
+  /* Sets base font size for rem calculations */
   font-size: 16px;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
-  min-height: 100vh;
-  background: var(--bg-color);
-  color: var(--text-color);
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: "Arial", sans-serif;
+  background-color: white;
+  color: black;
   line-height: 1.5;
+
+  /* CRITICAL: Prevents unwanted horizontal scrolling on mobile screens */
   overflow-x: hidden;
+  width: 100%;
+
+  /* Ensures the body takes up at least the full viewport height */
+  min-height: 100vh;
+  /* Modern browsers: uses dynamic viewport height to account for mobile URL bars */
+  min-height: 100dvh;
+
 }
 
+#root,
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  overflow-x: hidden;
+  
+}
+
+/* ==========================================================================
+     3. RESPONSIVE MEDIA DEFAULTS
+     ========================================================================== */
+/* Ensures images and videos never overflow their parent containers */
 img,
 picture,
 video,
@@ -46,66 +56,55 @@ canvas,
 svg {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
-button,
+/* ==========================================================================
+     4. ACCESSIBILITY & TOUCH TARGETS (MOBILE)
+     ========================================================================== */
+h1, h2, h3, h4, h5, h6, label, button,
+a,
 input,
-textarea,
-select {
-  font: inherit;
+select,
+textarea {  
+  font-family: "Roboto", serif;
 }
 
-#__root {
-  min-height: 100vh;
+p {
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
 }
+/* Ensures clickable elements are large enough for thumb taps on touchscreens */
 
-.container {
-  width: min(100%, var(--max-width));
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--page-padding);
-  padding-right: var(--page-padding);
-}
+@media screen and (max-width: 540px) {
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-
-.col {
-  flex: 1 1 0;
-  min-width: 0;
-}
-
-.section {
-  background: var(--surface-color);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-  padding: 24px;
-}
-
-@media (max-width: 900px) {
-  html {
-    font-size: 15px;
-  }
-
-  .row {
-    gap: 18px;
+  button,
+  a[role="button"],
+  input[type="submit"] {
+    min-height: 44px;
+    min-width: 44px;
   }
 }
 
-@media (max-width: 600px) {
-  html {
-    font-size: 14px;
-  }
+/* ==========================================================================
+     5. GLOBAL CSS VARIABLES
+     ========================================================================== */
 
-  .container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
 
-  .row {
-    flex-direction: column;
-  }
+:root {
+  --max-width: 1200px;
+  --page-padding: 24px;
+  --bg-dark: #d4ac79;
+  --bg-light: #c97d7e;
+  --bg-muted: #9CA790;
+  --color-primary: #f8d2d3;
+  --color-secondary: #ffe5b4;
+  --color-highlight: #f19591;
+  --color-warning: #8A5A65;
+  --color-success: #6b9e78;
+  --text-dark: #6f686d;
+  --text-medium: #7a7a7a;
+  --text-light: #F9F4EE;
+  --font-body: 'Arial', sans-serif;
+  --font-header: 'Roboto', serif;
 }

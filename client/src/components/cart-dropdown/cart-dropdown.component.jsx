@@ -13,18 +13,31 @@ import {
   EmptyMessageContainer,
   CartItemsContainer
 } from './cart-dropdown.styles';
+import { SubTotalContainer } from '../cart-item/cart-item.styles.jsx';
 
-const CartDropdown = ({ cartItems, history, dispatch }) => (
+const CartDropdown = ({ cartItems, history, dispatch }) => {
+  const [subTotal, setSubTotal] = React.useState(0);
+
+  React.useEffect(() => {
+    let total = 0;
+    cartItems.forEach(item => {
+      total += item.quantity * item.price;
+    });
+    setSubTotal(total);
+  }, [cartItems]);
+  
+  return (
   <CartDropdownContainer>
     <CartItemsContainer>
       {cartItems.length ? (
         cartItems.map(cartItem => (
-          <CartItem key={cartItem.id} item={cartItem} />
+          <CartItem key={cartItem.id} item={cartItem}/>
         ))
       ) : (
         <EmptyMessageContainer>Your cart is empty</EmptyMessageContainer>
       )}
     </CartItemsContainer>
+    <SubTotalContainer>Your subtotal: ${subTotal}</SubTotalContainer>
     <CartDropdownButton
       onClick={() => {
         history.push('/checkout');
@@ -34,7 +47,7 @@ const CartDropdown = ({ cartItems, history, dispatch }) => (
       GO TO CHECKOUT
     </CartDropdownButton>
   </CartDropdownContainer>
-);
+)};
 
 const mapStateToProps = createStructuredSelector({
   cartItems: selectCartItems

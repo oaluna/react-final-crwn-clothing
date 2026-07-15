@@ -1,37 +1,36 @@
 import styled, { css } from 'styled-components';
+import { colors, fonts } from '../../styles/theme';
 
 const buttonStyles = css`
-  background: linear-gradient(
-    245deg,
-    rgba(118, 50, 89, 1) 0%,
-    rgba(136, 110, 107, 1) 85%
-  );
-  color: white;
+  background: linear-gradient(to right, ${colors.bgDark}, ${colors.bgLight});
+  color: ${colors.black};
   border: none;
-
+  opacity: 1;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.21);
   &:hover {
-    color: black;
+    background: linear-gradient(to right, ${colors.bgLight}, ${colors.bgLight});
+    color: ${colors.black};
   }
 `;
 
 const invertedButtonStyles = css`
-  background-color: white;
-  color: black;
-  border: 1px solid black;
+  background-color: ${colors.white};
+  color: ${colors.black};
+  border: 1px solid ${colors.black};
 
   &:hover {
-    background-color: black;
-    color: white;
+    background-color: ${colors.black};
+    color: ${colors.white};
     border: none;
   }
 `;
 
 const googleSignInStyles = css`
-  background-color: #4285f4;
-  color: white;
+  background-color: ${colors.googleBlue};
+  color: ${colors.white};
 
   &:hover {
-    background-color: #357ae8;
+    background-color: ${colors.googleBlueHover};
     border: none;
   }
 `;
@@ -53,7 +52,7 @@ export const CustomButtonContainer = styled.button`
   padding: 0 35px 0 35px;
   font-size: 15px;
   text-transform: uppercase;
-  font-family: 'Raleway', sans-serif;
+  font-family: ${fonts.body};
   font-weight: 700;
   cursor: pointer;
   display: flex;

@@ -1,9 +1,9 @@
 import styled from 'styled-components';
+import { colors, fonts, media, flexColumn } from '../../styles/theme';
 
 export const CollectionPreviewContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-padding: 14px;
+  ${flexColumn}
+  padding: 14px;
 
   &:hover {
     cursor: pointer;
@@ -25,29 +25,27 @@ padding: 14px;
     margin-left: 7.5px;
   }
 
-  @media screen and (max-width: 800px) {
-
+  ${media.tabletLarge`
     align-items: center;
 
     &:hover {
-    cursor: pointer;
-    & .background-image {
-      transform: scale(1.1);
-      transition: transform 2.2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      cursor: pointer;
+      & .background-image {
+        transform: scale(1.1);
+        transition: transform 2.2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      }
+      & .content {
+        transition: transform 2.2s;
+        opacity: 1;
+      }
     }
-    & .content {
-      transition: transform 2.2s;
-      opacity: 1;
+    &:first-child {
+      margin-right: 7.5px;
     }
-  }
-  &:first-child {
-    margin-right: 7.5px;
-  }
-  &:last-child {
-    margin-left: 7.5px;
-  }
-  }
-  }
+    &:last-child {
+      margin-left: 7.5px;
+    }
+  `}
 `;
 
 export const TitleContainer = styled.h1`
@@ -59,26 +57,29 @@ export const TitleContainer = styled.h1`
   padding: 5px 5em;
   box-sizing: border-box;
   cursor: pointer;
-  font-family: 'Yellowtail', cursive;
-height: 2px;
+  font-family: ${fonts.header};
+  height: 2px;
   background: linear-gradient(
     245deg,
-    rgba(118, 50, 89, 1) 5%,
+    black 5%,
     rgba(136, 110, 107, 0) 95%
   );
-  display:flex;
-  flex-direction: row;align-items: flex-end;
-color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  color: ${colors.black};
+
   &:hover {
-      color:  rgba(136, 110, 107, 1);
+    color: ${colors.black};
   }
-  @media (max-width: 800px) {
-    flex-direction:column;
-    align-items:flex-start;
+
+  ${media.tabletLarge`
+    flex-direction: column;
+    align-items: flex-start;
     margin: 3em;
     justify-content: flex-start;
     padding: 0 3em;
-  }
+  `}
 `;
 
 export const PreviewContainer = styled.div`
@@ -88,9 +89,9 @@ export const PreviewContainer = styled.div`
   grid-gap: 15px 15px;
   margin: 5px auto;
 
-  @media screen and (max-width: 800px) {
+  ${media.tabletLarge`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 15px;
-  }
+  `}
 `;

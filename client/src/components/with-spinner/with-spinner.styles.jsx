@@ -1,11 +1,10 @@
 import styled from 'styled-components';
+import { colors, flexCenter } from '../../styles/theme';
 
 export const SpinnerOverlay = styled.div`
   height: 60vh;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  ${flexCenter}
 `;
 
 export const SpinnerContainer = styled.div`
@@ -14,7 +13,7 @@ export const SpinnerContainer = styled.div`
   height: 50px;
   border: 3px solid rgba(195, 195, 195, 0.6);
   border-radius: 50%;
-  border-top-color: #636767;
+  border-top-color: ${colors.grayMedium};
   animation: spin 1s ease-in-out infinite;
   -webkit-animation: spin 1s ease-in-out infinite;
 

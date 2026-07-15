@@ -1,100 +1,66 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
+import { colors, fonts, media, flexColumn } from '../../styles/theme';
 
 export const StyledHero = styled.div`
-  position: relative;
   margin: 0;
   padding: 0;
-  height: 80vh;
   width: 100%;
   overflow: hidden;
-  font-family: 'Yellowtail', cursive;
-  display: flex;
+  font-family: ${fonts.header};
+  ${flexColumn}
   align-items: center;
   justify-content: center;
-`;
+  text-align: center;
 
-const FadeInAnimation = keyframes`
-0% {
-  opacity: 0;
-  margin-left: 40vw;
-  animation-delay: 0.3s;
- }
- 50% {
-  opacity: 0;
-  margin-left: 20vw;
- }
-100% {
-  opacity: 1;
-  float: none;
-  transition: 3s ease-in;
- }
+  ${media.mobile`
+    margin: 0;
+    height: 100vh;
+  `}
+`;
+export const HeroMask = styled.span`
+  width: 100%;
+  height: 100%;
+  -webkit-mask-image: -webkit-gradient(linear, left 0%, left bottom, from(rgb(255, 255, 255)), to(rgba(0,0,0,0)));
 `;
 
 export const HeaderHeroImg = styled.img`
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  filter: brightness(0.75);
-  z-index: 0;
+ clip-path: inset(0 0 60% 0);
+  overflow: hidden;
+  
 
-  @media (max-width: 800px) {
-    width: 100%;
-  }
+  z-index: 1;
+  position:relative;
+
 `;
 
 export const HeroText = styled.h1`
-  font-weight: 500;
-  color: white;
-  z-index: 21;
-  margin: 0;
-  line-height: 0.9;
-  padding: 0;
-  font-size: 84px;
+  font-size: 48px;
   position: absolute;
-  top: 20%;
-  left: 8%;
-  max-width: 600px;
+  left: 8vw;
+  top: 20vh;
+  color: ${colors.white};
+`;
 
-  .rainbow {
-    background: linear-gradient(90deg, #ff0051, #ff7300, #ffeb00, #2cff65, #00d6ff, #6b5bff, #ff00b3);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-  }
+export const HeroDescription = styled.span`
+  width: 100%;
+  height: auto;
+  background: ${colors.rust};
+  top: 0;
+  opacity: 1;
+  z-index: 100;
 
-  @media (max-width: 800px) {
-    width: 70%;
-    margin: 0;
-    font-size: 56px;
-    text-shadow: 0px 1.5px 2px rgba(0, 0, 0, 0.65);
-    opacity: 1;
-    z-index: 5;
-    animation: ${FadeInAnimation} 0.3s ease-in;
+  p {
+    color: ${colors.white};
   }
 `;
 
-export const HeroDescription = styled.p`
-  font-size: 18px;
-  font-family: 'Arial', sans-serif;
+export const ShopNowButton = styled.button`
   position: absolute;
-  top: 50%;
-  left: 8%;
-  max-width: 1000px;
-  text-align: left;
-  line-height: 1.5;
-  z-index: 21;
-  color: white;
-  margin: 0;
-  padding-right: 2rem;
-
-  @media (max-width: 800px) {
-    font-size: 14px;
-    max-width: 90%;
-    top: 55%;
-    left: 5%;
-  }
+  top: 40vh;
+  left: 20vw;
+  color: ${colors.white};
+  background: ${colors.primary};
+  z-index: 100;
 `;

@@ -7,13 +7,13 @@ import { selectCartItemsCount } from '../../redux/cart/cart.selectors';
 
 import {
   CartContainer,
-  ShoppingIcon,
+  CartGlyph,
   ItemCountContainer
 } from './cart-icon.styles';
 
 const CartIcon = ({ toggleCartHidden, itemCount }) => (
   <CartContainer onClick={toggleCartHidden}>
-    <ShoppingIcon />
+    <CartGlyph className="fa-solid fa-basket-shopping fa-2xl"></CartGlyph>
     <ItemCountContainer>{itemCount}</ItemCountContainer>
   </CartContainer>
 );

@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 import CustomButton from '../custom-button/custom-button.component';
+import { colors, media, softShadow, flexColumn } from '../../styles/theme';
 
 export const CollectionItemContainer = styled.div`
   width: 350px;
-  display: flex;
-  flex-direction: column;
+  ${flexColumn}
   height: 600px;
   align-items: center;
   position: relative;
-  color: black;
-  box-shadow: 0px 1.5px 4px rgba(0, 0, 0, 0.3);
+  color: ${colors.black};
+  background-color: ${colors.tan};
+  ${softShadow('4px')}
   margin: 15px;
   padding: 15px;
   cursor: pointer;
@@ -52,7 +53,7 @@ export const CollectionItemContainer = styled.div`
     }
   }
 
-  @media screen and (max-width: 800px) {
+  ${media.tabletLarge`
     width: 100%;
 
     &:hover {
@@ -62,10 +63,10 @@ export const CollectionItemContainer = styled.div`
 
       button {
         opacity: 1;
-        color: goldenrod;
+        color: ${colors.gold};
       }
     }
-  }
+  `}
 `;
 
 export const AddButton = styled(CustomButton)`
@@ -73,19 +74,16 @@ export const AddButton = styled(CustomButton)`
   opacity: 0.7;
   position: absolute;
   top: 100%;
-  color: white;
+  color: ${colors.white};
   border: none;
-  background: linear-gradient(
-    245deg,
-    rgba(118, 50, 89, 1) 0%,
-    rgba(136, 110, 107, 1) 85%
-  );
-  @media screen and (max-width: 800px) {
+  background: ${colors.gray};
+
+  ${media.tabletLarge`
     display: block;
     opacity: 0.9;
     min-width: unset;
     padding: 0 10px;
-  }
+  `}
 `;
 
 export const BackgroundImage = styled.div`
@@ -101,8 +99,7 @@ export const BackgroundImage = styled.div`
 export const CollectionFooterContainer = styled.div`
   width: 100%;
   height: 50%;
-  display: flex;
-  flex-direction: column;
+  ${flexColumn}
   align-items: flex-start;
   text-align: left;
   position: absolute;
@@ -119,12 +116,17 @@ export const NameContainer = styled.span`
   text-align: left;
 `;
 
+export const NameContainerRow = styled(NameContainer)`
+  flex-direction: row;
+  align-items: flex-start;
+`;
+
 export const PriceContainer = styled.span`
   font-size: 20px;
   text-align: right;
   float: right;
   font-weight: 700;
-  color: crimson;
+  color: ${colors.white};
 `;
 
 export const DescriptionContainer = styled.span`
@@ -133,8 +135,8 @@ export const DescriptionContainer = styled.span`
   font-weight: 500;
   line-height: 1.3;
   position: absolute;
-  color: black;
-  flex-direction: column;
+  color: ${colors.black};
+  ${flexColumn}
   align-items: flex-start;
   text-align: left;
   padding: 5px;

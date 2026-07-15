@@ -1,10 +1,10 @@
 import styled from 'styled-components';
+import { colors, flexColumn } from '../../styles/theme';
 
 export const CheckoutPageContainer = styled.div`
   width: 55%;
   min-height: 90vh;
-  display: flex;
-  flex-direction: column;
+  ${flexColumn}
   align-items: center;
   margin: 50px auto 0;
 
@@ -19,7 +19,7 @@ export const CheckoutHeaderContainer = styled.div`
   height: 40px;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid darkgrey;
+  border-bottom: 1px solid ${colors.black};
 `;
 
 export const HeaderBlockContainer = styled.div`
@@ -41,5 +41,5 @@ export const WarningContainer = styled.div`
   text-align: center;
   margin-top: 40px;
   font-size: 24px;
-  color: red;
+  color: ${colors.gray};
 `;

@@ -1,9 +1,9 @@
 import styled from 'styled-components';
+import { flexColumn } from '../../styles/theme';
 
 export const SignUpContainer = styled.div`
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  ${flexColumn}
   margin: 0 1em;
 `;
 

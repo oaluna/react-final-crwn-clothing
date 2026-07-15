@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { media } from '../../styles/theme';
 
 export const SignInAndSignUpContainer = styled.div`
   width: 900px;
@@ -6,8 +7,8 @@ export const SignInAndSignUpContainer = styled.div`
   justify-content: space-between;
   margin: 30px auto;
 
-  @media and (max-width: 900px) {
+  ${media.laptop`
     flex-direction: column;
-    align-items:center;
-  }
+    align-items: center;
+  `}
 `;

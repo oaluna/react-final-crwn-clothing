@@ -1,8 +1,8 @@
 import styled from 'styled-components';
+import { flexColumn } from '../../styles/theme';
 
 export const CollectionPageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${flexColumn}
 `;
 
 export const CollectionTitle = styled.h2`
